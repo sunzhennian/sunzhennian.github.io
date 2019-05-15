@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Zhennian&#39;s Studio</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Zhennian&#39;s Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Zhennian Sun</copyright>
+    <lastBuildDate>Fri, 04 Jan 2019 13:28:01 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>5g</title>
+      <link>/tags/5g/</link>
+      <pubDate>Fri, 04 Jan 2019 13:28:01 +0800</pubDate>
+      
+      <guid>/tags/5g/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nr V2x</title>
+      <link>/tags/nr-v2x/</link>
+      <pubDate>Fri, 04 Jan 2019 13:28:01 +0800</pubDate>
+      
+      <guid>/tags/nr-v2x/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5g on Zhennian&#39;s Studio</title>
+    <link>/tags/5g/</link>
+    <description>Recent content in 5g on Zhennian&#39;s Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Zhennian Sun</copyright>
+    <lastBuildDate>Fri, 04 Jan 2019 13:28:01 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/5g/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Agreements of NR-V2X</title>
+      <link>/2019/01/agreements-of-nr-v2x/</link>
+      <pubDate>Fri, 04 Jan 2019 13:28:01 +0800</pubDate>
+      
+      <guid>/2019/01/agreements-of-nr-v2x/</guid>
+      <description>1. RAN1#94 1.1. Sidelink design 1.1.1. Suport of unicast,groupcast and broadcast Agreements:
+ RAN1 assumes that higher layer decides if a certain data has to be transmitted in a unicast, groupcast, or broadcast manner and inform the physical layer of the decision. For a transmission for unicast or groupcast, RAN1 assumes that the UE has established the session to which the transmission belongs to. Note that RAN1 has not made agreement about the difference among transmissions in unicast, groupcast, and broadcast manner.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="utf-8"><script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "/"
+        },
+        "articleSection" : "post",
+        "name" : "Agreements of NR-V2X",
+        "headline" : "Agreements of NR-V2X",
+        "description" : "Text about the site""
+        "inLanguage" : "en",
+        "author" : "Zhennian Sun",
+        "creator" : "Zhennian Sun",
+        "publisher": "Zhennian Sun",
+        "accountablePerson" : "Zhennian Sun",
+        "copyrightHolder" : "Zhennian Sun",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-01-04 13:28:01 +0800 CST",
+        "dateModified" : "2019-01-04 13:28:01 +0800 CST",
+        "url" : "/2019/01/agreements-of-nr-v2x/",
+        "wordCount" : "7052",
+        "keywords" : [ "5G","NR V2X","Blog" ]
+    }
+</script>
+<title>
+    Agreements of NR-V2X &ndash; Zhennian&#39;s Studio
+</title><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="favicon.ico">
+
+
+<meta itemprop="name" content="Agreements of NR-V2X">
+<meta itemprop="description" content="1. RAN1#94 1.1. Sidelink design 1.1.1. Suport of unicast,groupcast and broadcast Agreements:
+ RAN1 assumes that higher layer decides if a certain data has to be transmitted in a unicast, groupcast, or broadcast manner and inform the physical layer of the decision. For a transmission for unicast or groupcast, RAN1 assumes that the UE has established the session to which the transmission belongs to. Note that RAN1 has not made agreement about the difference among transmissions in unicast, groupcast, and broadcast manner.">
+
+
+<meta itemprop="datePublished" content="2019-01-04T13:28:01&#43;08:00" />
+<meta itemprop="dateModified" content="2019-01-04T13:28:01&#43;08:00" />
+<meta itemprop="wordCount" content="7052">
+
+
+
+<meta itemprop="keywords" content="5G,NR V2X," />
+
+<meta property="og:title" content="Agreements of NR-V2X" />
+<meta property="og:description" content="1. RAN1#94 1.1. Sidelink design 1.1.1. Suport of unicast,groupcast and broadcast Agreements:
+ RAN1 assumes that higher layer decides if a certain data has to be transmitted in a unicast, groupcast, or broadcast manner and inform the physical layer of the decision. For a transmission for unicast or groupcast, RAN1 assumes that the UE has established the session to which the transmission belongs to. Note that RAN1 has not made agreement about the difference among transmissions in unicast, groupcast, and broadcast manner." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2019/01/agreements-of-nr-v2x/" /><meta property="article:published_time" content="2019-01-04T13:28:01&#43;08:00"/>
+<meta property="article:modified_time" content="2019-01-04T13:28:01&#43;08:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Agreements of NR-V2X"/>
+<meta name="twitter:description" content="1. RAN1#94 1.1. Sidelink design 1.1.1. Suport of unicast,groupcast and broadcast Agreements:
+ RAN1 assumes that higher layer decides if a certain data has to be transmitted in a unicast, groupcast, or broadcast manner and inform the physical layer of the decision. For a transmission for unicast or groupcast, RAN1 assumes that the UE has established the session to which the transmission belongs to. Note that RAN1 has not made agreement about the difference among transmissions in unicast, groupcast, and broadcast manner."/>
+
+
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Zhennian&#39;s Studio"/>
+
+
+
+
+
+<link rel="stylesheet" href="/css/vendor.min.05b46011155441432c1f57b66ddf9d330468154e087ecb0be34006846476f55b.css" integrity="sha256-BbRgERVUQUMsH1e2bd&#43;dMwRoFU4IfssL40AGhGR29Vs="><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      showProcessingMessages: false,
+      messageStyle: "none",
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+          inlineMath:  [ ["$", "$"] ],
+          displayMath: [ ["$$","$$"] ],
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
+          ignoreClass:"comment-content"
+      },
+      "HTML-CSS": {
+          availableFonts: ["STIX","TeX"],
+          showMathMenu: false
+      }
+  });
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  </script>
+  <script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-7691209-1']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+          document.addEventListener('DOMContentLoaded',function() {
+              document.getElementById("table-of-contents").onclick = function() {
+                  var elem = document.getElementById("text-table-of-contents");
+                  elem.style.display = elem.style.display == "block" ? "none" : "block";
+              }
+          });
+        
+          var url = document.location.href;
+          var orgsource = url.substring(0, url.lastIndexOf("."))+".org.html";
+          function show_org_source(){
+              document.location.href = orgsource;
+          }
+        </script><body><nav class="navbar navbar-light navbar-expand-lg bg-white border-bottom shadow-sm">
+        
+    <div class="container">
+        <a class="navbar-brand text-primary" href="/">Zhennian&#39;s Studio</a>
+        <a class="navbar-brand text-primary" >              </a>
+        <a class="navbar-brand text-primary" href="/categories/">Categories</a>
+        <a class="navbar-brand text-primary" >              </a>
+        <a class="navbar-brand text-primary" href="/tags/">Tags</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarCollapse">
+
+            <ul class="navbar-nav mr-auto">
+                
+                
+            </ul>
+
+            
+        </div>
+    </div>
+</nav>
+<main role="main">
+<div id="table-of-contents">
+    <h2>TOC</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#1-ran1-94">1. RAN1#94</a>
+<ul>
+<li><a href="#1-1-sidelink-design">1.1. Sidelink design</a>
+<ul>
+<li><a href="#1-1-1-suport-of-unicast-groupcast-and-broadcast">1.1.1. Suport of unicast,groupcast and broadcast</a></li>
+<li><a href="#1-1-2-physical-layer-structure-and-procedure-s">1.1.2. Physical layer structure and procedure(s)</a></li>
+<li><a href="#1-1-3-synchronization-mechanism">1.1.3. Synchronization mechanism</a></li>
+<li><a href="#1-1-4-resource-allocation-mechanism">1.1.4. Resource allocation mechanism</a></li>
+</ul></li>
+<li><a href="#1-2-evaluation-of-uu-for-advanced-v2x-use-cases">1.2. Evaluation of Uu for advanced V2X use cases</a></li>
+<li><a href="#1-3-uu-based-sidelink-resource-allocation-configuration">1.3. Uu-based sidelink resource allocation/configuration</a></li>
+<li><a href="#1-4-qos-management">1.4. QoS management</a></li>
+<li><a href="#1-5-coexistence">1.5. Coexistence</a></li>
+</ul></li>
+<li><a href="#2-ran1-94bis">2. RAN1#94bis</a>
+<ul>
+<li><a href="#2-1-sidelink-design">2.1. Sidelink design</a>
+<ul>
+<li><a href="#2-1-1-suport-of-unicast-groupcast-and-broadcast">2.1.1. Suport of unicast,groupcast and broadcast</a></li>
+<li><a href="#2-1-2-physical-layer-structure-and-procedure-s">2.1.2. Physical layer structure and procedure(s)</a></li>
+<li><a href="#2-1-3-synchronization-mechanism">2.1.3. Synchronization mechanism</a></li>
+<li><a href="#2-1-4-resource-allocation-mechanism">2.1.4. Resource allocation mechanism</a></li>
+</ul></li>
+<li><a href="#2-2-evaluation-of-uu-for-advanced-v2x-use-cases">2.2. Evaluation of Uu for advanced V2X use cases</a></li>
+<li><a href="#2-3-uu-based-sidelink-resource-allocation-configuration">2.3. Uu-based sidelink resource allocation/configuration</a></li>
+<li><a href="#2-4-qos-management">2.4. QoS management</a></li>
+<li><a href="#2-5-coexistence">2.5. Coexistence</a></li>
+</ul></li>
+<li><a href="#3-ran1-95">3. RAN1#95</a>
+<ul>
+<li><a href="#3-1-sidelink-design">3.1. Sidelink design</a>
+<ul>
+<li><a href="#3-1-1-physical-layer-structure">3.1.1. Physical layer structure</a></li>
+<li><a href="#3-1-2-physical-layer-procedures">3.1.2. Physical layer procedures</a></li>
+<li><a href="#3-1-3-synchronization-mechanism">3.1.3. Synchronization mechanism</a></li>
+<li><a href="#3-1-4-resource-allocation-mechanism">3.1.4. Resource allocation mechanism</a></li>
+</ul></li>
+<li><a href="#3-2-evaluation-of-uu-for-advanced-v2x-use-cases">3.2. Evaluation of Uu for advanced V2X use cases</a>
+<ul>
+<li><a href="#3-2-1-uu-based-sidelink-resource-allocation-configuration">3.2.1. Uu-based sidelink resource allocation/configuration</a></li>
+</ul></li>
+<li><a href="#3-3-qos-management">3.3. QoS management</a></li>
+<li><a href="#3-4-coexistence">3.4. Coexistence</a></li>
+</ul></li>
+<li><a href="#4-adhoc-1901">4. Adhoc-1901</a>
+<ul>
+<li><a href="#4-1-sidelink-desgin">4.1. Sidelink desgin</a>
+<ul>
+<li><a href="#4-1-1-physical-layer-structure">4.1.1. Physical layer structure</a></li>
+<li><a href="#4-1-2-physical-layer-procedure">4.1.2. Physical layer procedure</a></li>
+<li><a href="#4-1-3-synchronization-mechanism">4.1.3. Synchronization mechanism</a></li>
+<li><a href="#4-1-4-resource-allocation-mechanism">4.1.4. Resource allocation mechanism</a></li>
+</ul></li>
+<li><a href="#4-2-evaluation-of-uu-for-advanced-v2x-use-cases">4.2. Evaluation of Uu for advanced V2X use cases</a></li>
+<li><a href="#4-3-uu-based-sidelink-resource-allocation-configuration">4.3. Uu-based sidelink resource allocation/configuration</a></li>
+<li><a href="#4-4-qos-management">4.4. QoS management</a></li>
+<li><a href="#4-5-coexistence">4.5. Coexistence</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<div class="container mt-3 mb-3">
+
+
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title"><a href="/2019/01/agreements-of-nr-v2x/">Agreements of NR-V2X</a></h1>
+        <h6 class="card-subtitle mb-2 text-muted">
+            04.01.2019 - 
+            Zhennian Sun -
+            Reading time ~34 Minutes
+        </h6>
+        <p class="card-text">
+
+<h1 id="1-ran1-94">1. RAN1#94</h1>
+
+<h2 id="1-1-sidelink-design">1.1. Sidelink design</h2>
+
+<h3 id="1-1-1-suport-of-unicast-groupcast-and-broadcast">1.1.1. Suport of unicast,groupcast and broadcast</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>RAN1 assumes that higher layer decides if a certain data has to be transmitted in a unicast, groupcast, or broadcast manner and inform the physical layer of the decision. For a transmission for unicast or groupcast, RAN1 assumes that the UE has established the session to which the transmission belongs to. Note that RAN1 has not made agreement about the difference among transmissions in unicast, groupcast, and broadcast manner.</li>
+<li>RAN1 assumes that the physical layer knows the following information for a certain transmission belonging to a unicast or groupcast session. Note RAN1 has not made agreement about the usage of this information.
+
+<ul>
+<li>ID
+
+<ul>
+<li>Groupcast: destination group ID, FFS: source ID</li>
+<li>Unicast: destination ID, FFS: source ID</li>
+<li>HARQ process ID (FFS for groupcast)</li>
+</ul></li>
+<li>RAN1 can continue discussion on other information</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>RAN1 to study the following topics for the SL enhancement for unicast and/or groupcast. Other topics are not precluded.
+
+<ul>
+<li>HARQ feedback</li>
+<li>CSI acquisition</li>
+<li>Open loop and/or closed-loop power control</li>
+<li>Link adaptation</li>
+<li>Multi-antenna transmission scheme</li>
+</ul></li>
+</ul>
+
+<h3 id="1-1-2-physical-layer-structure-and-procedure-s">1.1.2. Physical layer structure and procedure(s)</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>At least PSCCH and PSSCH are defined for NR V2X. PSCCH at least carries information necessary to decode PSSCH.
+
+<ul>
+<li>Note: PSBCH will be discussed in the synchronization agenda.</li>
+</ul></li>
+<li>RAN1 continues study on the necessity of other channels.</li>
+<li>Further study on
+
+<ul>
+<li>Whether/which sidelink feedback information is carried by PSCCH or by another channel/signal.</li>
+<li>Whether/which information to assist resource allocation and/or schedule UE’s transmission resource(s) is carried by PSCCH or by another channel/signal.</li>
+<li>PSCCH format(s) and content(s) for unicast, groupcast, and broadcast</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>RAN1 to continue study on the physical channel considering at least the following aspects:
+
+<ul>
+<li>Waveform
+
+<ul>
+<li>Candidates: CP-OFDM, DFT-s-OFDM</li>
+<li>Proposals from companies:
+
+<ul>
+<li>CP-OFDM only</li>
+<li>Support both</li>
+</ul></li>
+<li>Consideration points:
+​    + Different channel can have different waveform?
+​    + Benefit and impact of supporting only one waveform and supporting both waveforms</li>
+</ul></li>
+<li>Subcarrier spacing
+
+<ul>
+<li>Candidates for further study are:
+​    + FR1: 15 kHz, 30 kHz, 60 kHz, 120 kHz
+​    + FR2: 30 kHz, 60 kHz, 120 kHz, 240 kHz</li>
+<li>Companies are encouraged to consider the potential issues and benefit of introducing new subcarrier spacing.</li>
+</ul></li>
+<li>CP length</li>
+<li>RS design
+
+<ul>
+<li>Candidates are:
+
+<ul>
+<li>DM-RS
+
+<ul>
+<li>DM-RS defined in Rel-15 NR Uu is the starting point.</li>
+</ul></li>
+<li>PT-RS</li>
+<li>CSI-RS</li>
+<li>SRS</li>
+<li>AGC training signal</li>
+</ul></li>
+</ul></li>
+<li>Channel coding
+
+<ul>
+<li>For data, channel coding defined for data in Rel-15 NR Uu is the starting point.</li>
+<li>For control, channel coding defined for control in Rel-15 NR Uu is the starting point.</li>
+</ul></li>
+<li>Modulation</li>
+<li>RE mapping and rate-matching</li>
+<li>Scrambling</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>RAN1 continues study on the necessity, benefits and relationship between bandwidth part and resource pool.</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>Agree the following assumptions as tentative assumptions for the simulation at least till RAN1#94bis
++ AGC
+    + Up to [15] us in FR1. Up to [10] us in FR2.
++ TX/RX switching time
+    + [13] us in FR1 and [7] us in FR2
++ Time error
+    + Up to [0.4] us between a UE and its synchronization reference
++ Frequency error
+    + Up to [0.1] PPM between a UE and its synchronization reference</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>RAN1 to continue study on multiplexing physical channels considering at least the above aspects:
++ Multiplexing of PSCCH and the associated PSSCH (here, the “associated” means that the PSCCH at least carries information necessary to decode the PSSCH).
+    + Study further the following options:
+    + Option 1: PSCCH and the associated PSSCH are transmitted using non-overlapping time resources.
+        + Option 1A: The frequency resources used by the two channels are the same.
+        + Option 1B: The frequency resources used by the two channels can be different.
+    + Option 2: PSCCH and the associated PSSCH are transmitted using non-overlapping frequency resources in the all the time resources used for transmission. The time resources used by the two channels are the same.
+    + Option 3: A part of PSCCH and the associated PSSCH are transmitted using overlapping time resources in non-overlapping frequency resources, but another part of the associated PSSCH and/or another part of the PSCCH are transmitted using non-overlapping time resources.</p>
+
+<p>Illustration of the above options:
+<div align="center"><img src="/img/agreements_nr_v2x/2019-01-04-20-37-42.png" alt="Mutiplexing of PSCCH and PSSCH" /></div></p>
+
+<h3 id="1-1-3-synchronization-mechanism">1.1.3. Synchronization mechanism</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>NR V2X Sidelink Synchronization includes at least the following
++ Sidelink synchronization signal(s)
+    + PSBCH
+    + Sidelink synchronization sources and procedure(s)
+        + Study potential synchronization sources –GNSS, gNB, eNB, UE, LTE UE
+            + Note: this doesn’t mean all of them are to be supported</p>
+
+<h3 id="1-1-4-resource-allocation-mechanism">1.1.4. Resource allocation mechanism</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>At least two sidelink resource allocation modes are defined for NR-V2X sidelink communication
+
+<ul>
+<li>Mode 1: Base station schedules sidelink resource(s) to be used by UE for sidelink transmission(s)</li>
+<li>Mode 2: UE determines (i.e. base station does not schedule) sidelink transmission resource(s) within sidelink resources configured by base station/network or pre-configured sidelink resources</li>
+</ul></li>
+<li>Notes:
+
+<ul>
+<li>eNB control of NR sidelink and gNB control of LTE sidelink resources will be separately considered in corresponding agenda items.</li>
+<li>Mode-2 definition covers potential sidelink radio-layer functionality or resource allocation sub-modes (subject to further refinement including merging of some or all of them) where
+
+<ul>
+<li>a): UE autonomously selects sidelink resource for transmission</li>
+<li>b): UE assists sidelink resource selection for other UE(s)</li>
+<li>c): UE is configured with NR configured grant (type-1 like) for sidelink transmission</li>
+<li>d):UE schedules sidelink transmissions of other UEs</li>
+</ul></li>
+</ul></li>
+<li>RAN1 to continue study details of resource allocation modes for NR-V2X sidelink communication</li>
+</ul>
+
+<h2 id="1-2-evaluation-of-uu-for-advanced-v2x-use-cases">1.2. Evaluation of Uu for advanced V2X use cases</h2>
+
+<h2 id="1-3-uu-based-sidelink-resource-allocation-configuration">1.3. Uu-based sidelink resource allocation/configuration</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>NR Uu can assign NR sidelink resources for the following:
+
+<ul>
+<li>Shared licensed carrier between Uu and NR sidelink</li>
+<li>Dedicated NR sidelink carrier</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Study at least the following NR sidelink resource allocation techniques:
+
+<ul>
+<li>Dynamic resource allocation</li>
+<li>Activation/deactivation based
+
+<ul>
+<li>E.g., semi-persistent scheduling allocation or NR grant free type-2</li>
+</ul></li>
+<li>RRC (pre-)configured
+
+<ul>
+<li>E.g., configured NR grant type-1, UE autonomous selection of resource(s) from resources configured by RRC</li>
+</ul></li>
+</ul></li>
+<li>RAN1 will study the level of network control, e.g., whether the UE may select other parameters (e.g., MCS) and/or the exact transmission resources, and whether the selection is autonomous or not</li>
+</ul>
+
+<h2 id="1-4-qos-management">1.4. QoS management</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>From RAN1 perspective, at least the following QoS-related parameters relevant to physical layer studies are considered:
++ Priority
++ latency
++ reliability</p>
+
+<h2 id="1-5-coexistence">1.5. Coexistence</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>For the study of LTE-V2X and NR-V2X sidelink co-existence, at least the following scenarios are considered from the UEs perspective:
++ LTE sidelink and NR sidelink do not have any coordinated procedures
++ LTE sidelink and NR sidelink have coordinated procedures and half-duplex constraints are assumed
++ RAN1 will focus on this scenario in the SI</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>RAN1 focus on at least the following potential solutions for coexistence at least until the next meeting:
++ TDM of LTE V2X and NR V2X sidelink transmissions
++ FDM of LTE V2X and NR V2X sidelink transmissions</p>
+
+<h1 id="2-ran1-94bis">2. RAN1#94bis</h1>
+
+<h2 id="2-1-sidelink-design">2.1. Sidelink design</h2>
+
+<h3 id="2-1-1-suport-of-unicast-groupcast-and-broadcast">2.1.1. Suport of unicast,groupcast and broadcast</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Layer-1 destination ID is conveyed via PSCCH.
+
+<ul>
+<li>FFS how many bits are conveyed.</li>
+<li>FFS details for each of the unicast/groupcast/broadcast cases</li>
+</ul></li>
+<li>Additional Layer-1 ID(s) is conveyed via PSCCH at least for the purpose of identifying which transmissions can be combined in reception when HARQ feedback is in use.
+
+<ul>
+<li>FFS whether this ID can be used for other HARQ feedback related operation.</li>
+<li>FFS other purpose</li>
+<li>FFS how many bits are conveyed.</li>
+</ul></li>
+<li>FFS details including how to convey the ID(s), e.g., whether the ID(s) is conveyed in the SCI or used for CRC scrambling.</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For unicast, sidelink HARQ feedback and HARQ combining in the physical layer are supported.
+
+<ul>
+<li>FFS details, including the possibility of disabling HARQ in some scenarios</li>
+</ul></li>
+<li>For groupcast, sidelink HARQ feedback and HARQ combining in the physical layer are supported.
+
+<ul>
+<li>FFS details, including the possibility of disabling HARQ in some scenarios</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>In the context of sidelink CSI, RAN1 to study further which of the following information is useful in sidelink operation when it is available at the transmitter.
+
+<ul>
+<li>Information representing the channel between the transmitter and receiver</li>
+<li>Information representing the interference at receiver</li>
+<li>Examples for this information are
+
+<ul>
+<li>CQI, PMI, RI, RSRP, RSRQ, pathgain/pathloss, SRI, CRI, interference condition, vehicle motion</li>
+</ul></li>
+<li>FFS including
+
+<ul>
+<li>Such information can be acquired using reciprocity or feedback</li>
+<li>Time scale of the information</li>
+<li>Which information is useful in which operation and scenario</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="2-1-2-physical-layer-structure-and-procedure-s">2.1.2. Physical layer structure and procedure(s)</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>NR sidelink supports the SCSs supported by Uu in a given frequency range, i.e., {15, 30, 60 kHz} in FR1 and {60, 120 kHz} in FR2.
++ FFS the supported CP length
++ Baseline is that a UE is not required to receive sidelink transmissions using different SCSs simultaneously in a given carrier.
+    + FFS if this applies to sidelink synchronization signals/channels
++ Baseline is that a UE is not required to transmit sidelink transmissions using different SCSs simultaneously in a given carrier.
+    + FFS if this applies to sidelink synchronization signals/channels</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>For PSCCH and associated PSSCH multiplexing
++ At least one of Option 1A, 1B, and 3 is supported.
+    + FFS whether some options require transient period between PSCCH and PSSCH.
++ FFS whether to support Option 2</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Sidelink control information (SCI) is defined.
+
+<ul>
+<li>SCI is transmitted in PSCCH.</li>
+<li>SCI includes at least one SCI format which includes the information necessary to decode the corresponding PSSCH.
+
+<ul>
+<li>NDI, if defined, is a part of SCI.</li>
+</ul></li>
+</ul></li>
+<li>Sidelink feedback control information (SFCI) is defined.
+
+<ul>
+<li>SFCI includes at least one SFCI format which includes HARQ-ACK for the corresponding PSSCH.
+
+<ul>
+<li>FFS whether a solution will use only one of “ACK,” “NACK,” “DTX,” or use a combination of them.</li>
+</ul></li>
+<li>FFS how to include other feedback information (if supported) in SFCI.</li>
+<li>FFS how to convey SFCI on sidelink in PSCCH, and/or PSSCH, and/or a new physical sidelink channel</li>
+</ul></li>
+<li>FFS in the context of Mode 1:
+
+<ul>
+<li>whether/how to convey information for SCI on downlink</li>
+<li>whether/how to convey information of SFCI on uplink</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>At least resource pool is supported for NR sidelink
+
+<ul>
+<li>Resource pool is a set of time and frequency resources that can be used for sidelink transmission and/or reception.
+
+<ul>
+<li>FFS whether a resource pool consists of contiguous resources in time and/or frequency.</li>
+<li>A resource pool is inside the RF bandwidth of the UE.</li>
+<li>FFS how gNB and other UEs know the RF bandwidth of the UE</li>
+</ul></li>
+<li>FFS if BWP (if defined) can be used to in defining at least part of resource pool</li>
+<li>FFS if the numerology of a resource pool is indicated as a part of (pre-)configuration for resource pool, carrier, band, or BWP (if defined)</li>
+<li>UE assumes a single numerology in using a resource pool.</li>
+<li>Multiple resource pools can be configured to a single UE in a given carrier.
+
+<ul>
+<li>FFS how to use multiple resource pools when (pre-)configured.</li>
+</ul></li>
+</ul></li>
+<li>FFS BWP is supported for NR sidelink
+
+<ul>
+<li>FFS whether RAN1 can assume that at most one BWP is configured in a carrier from the system perspective.</li>
+<li>It is RAN1 understanding that, in some cases, the entire system bandwidth is covered by a single BWP.</li>
+<li>FFS the details of BWP configurations, including the possibility of restricting the number of BWPs</li>
+<li>FFS whether BWP for TX and RX is separated or a common BWP applied to both TX and RX</li>
+<li>There is at most one activated sidelink BWP for a UE in a given carrier as in the Uu case
+
+<ul>
+<li>Further study the feasibility, benefit, and impact of sidelink BWP switching</li>
+</ul></li>
+<li>Aim to conclude in RAN1#95
+
+<ul>
+<li>Companies are encouraged to provide more analysis, including checking current Rel-15 specification regarding BWP related text</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="2-1-3-synchronization-mechanism">2.1.3. Synchronization mechanism</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>At least GNSS, gNB, NR UE, and eNB are supported as the synchronization source for NR V2X.
++ eNB as a synchronization source for NR V2X UEs supporting LTE Uu/PC5 or Uu only (no change to the eNB behaviour)
++ Whether a source is supported is for further NR V2X UE capability consideration</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>NR V2X sidelink operation includes the following cases:
++ NR V2X sidelink is synchronized with LTE V2X sidelink
++ NR V2X sidelink synchronization procedure operates independently to the LTE V2X sidelink synchronization procedure</p>
+
+<p><font size=5 color=green>Agreements:</font>
+For the purpose of evaluation, the initial frequency error should be within ±[5] ppm with the assumption of uniform distribution [-5, 5] for NR V2X sidelink synchronization.
++ Note: This is the error of the local oscillator for the Tx and Rx with respect to the absolute carrier frequency.</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>The design of NR V2X sidelink synchronization signals and PSBCH uses NR SSB structure as the starting point with the following properties,
++ NR V2X synchronization signals include sidelink PSS (S-PSS) and sidelink SSS (S-SSS) and are structured with PSBCH in a block format (S-SSB)</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>Periodic transmission of S-SSB in NR V2X  is supported
++ FFS:  whether one/more S-SSB is transmitted in a period</p>
+
+<h3 id="2-1-4-resource-allocation-mechanism">2.1.4. Resource allocation mechanism</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Sidelink sensing and resource selection procedures are studied for Mode-2(a)
+
+<ul>
+<li>The following techniques are studied to identify occupied sidelink resources
+
+<ul>
+<li>decoding of sidelink control channel transmissions</li>
+<li>sidelink measurements</li>
+<li>detection of sidelink transmissions</li>
+<li>other options are not precluded, including combination of the above options</li>
+</ul></li>
+<li>The following aspects are studied for sidelink resource selection
+
+<ul>
+<li>how a UE selects resource for PSCCH and PSSCH transmission (or other sidelink physical channel/signal, if it is introduced)</li>
+<li>which information is used by UE for resource selection procedure</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>The following aspects about assistance information are studied for Mode 2(b)
+
+<ul>
+<li>Which assistance information is used and how it is acquired</li>
+<li>Which UE sends assistance information</li>
+<li>How to deliver assistance information, including physical channel and UE behavior</li>
+<li>How assistance information is taken into account in determination of sidelink resource for transmission</li>
+</ul></li>
+<li>RAN1 to further study whether some or all of Mode-2(b) functionality is a part of Mode-2(a)&copy;(d)</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>The following aspects are studied for Mode 2&copy;
+
+<ul>
+<li>How to assign resource(s) for UE sidelink transmission to mitigate collisions and half-duplex impacts</li>
+<li>Whether any sensing or resource selection procedure is used on top of configured grant(s)</li>
+<li>Whether and how to use any granted but unused resources</li>
+<li>How to adapt to traffic variation</li>
+<li>How it is different from Mode-1 operation for in-coverage scenario</li>
+<li>How it is different from Mode-2(a), when Mode-2(a) uses dedicated resource pool with dedicated sidelink resource pool configuration</li>
+<li>Whether and how this mode operates out of network coverage</li>
+</ul></li>
+<li>RAN1 to further study whether some or all of Mode-2&copy; functionality is a part of Mode-2(a)(b)(d)</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>The following aspects are studied for Mode 2(d)
+
+<ul>
+<li>In which use cases/scenarios this mode is applicable</li>
+<li>What is the overall architecture for Mode-2(d) operation</li>
+<li>How to decide which UE schedules which other UE(s) and how to maintain this relationship</li>
+<li>What is the procedure of UE(s) when the scheduling UE disappears</li>
+<li>What is the scheduling UE behavior and signaling mechanism to schedule sidelink resources for transmission/reception for other UEs</li>
+<li>Which resources can be used to schedule other UEs</li>
+<li>Inter- and intra-UE collision handling and sidelink resource allocation mechanisms across groups</li>
+</ul></li>
+<li>RAN1 to further study whether or not some or all of the above aspects are applicable to 2(b)</li>
+</ul>
+
+<h2 id="2-2-evaluation-of-uu-for-advanced-v2x-use-cases">2.2. Evaluation of Uu for advanced V2X use cases</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>For Uu for advanced V2X use cases, NR supports having multiple active UL configured grants in a given BWP in a given cell.
++ Details FFS</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>NR supports that UE reports assistance information to the gNB, consisting of at least (with details FFS):
++ UE-related geographic information (e.g., position).
++ Reports of Uu V2X traffic-related information (at least for periodic traffic)</p>
+
+<h2 id="2-3-uu-based-sidelink-resource-allocation-configuration">2.3. Uu-based sidelink resource allocation/configuration</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>It is supported that LTE Uu provides at least necessary semi-static configuration for NR mode-2 SL communications
+
+<ul>
+<li>FFS details</li>
+</ul></li>
+<li>Further study impact and benefits of LTE Uu managing NR mode-1 SL communications</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>It is supported that NR Uu provides necessary semi-static configuration for mode-4 LTE SL communications
+
+<ul>
+<li>From RAN1 perspective, signalling should be similar to LTE in terms of UE-specific or cell-specific</li>
+<li>Signalling details up to RAN2</li>
+</ul></li>
+<li>Further study feasibility, benefits (others than ones already identified for LTE) and impact of NR Uu managing LTE mode-3 SL communications.</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>Continue studying NR sidelink resource allocation techniques by NR Uu for mode-1:
++ Dynamic resource allocation
++ Semi-persistent scheduling allocation or NR grant type-2 (activation/de-activation by physical layer signaling)
++ Grant free transmission i.e., configured NR grant type-1</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>Study further which resources to use for SL transmission and other network-control sidelink issues (e.g., power control) in the case of shared carrier</p>
+
+<h2 id="2-4-qos-management">2.4. QoS management</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>RAN1 studies further how to use
++ priority,
++ latency,
++ reliability,
++ minimum required communication range (as defined by higher layers) if agreed to use
+in the physical layer aspects of at least
++ resource allocation and
++ congestion control and
++ resolution of in-device coexistence issues and
++ power control</p>
+
+<h2 id="2-5-coexistence">2.5. Coexistence</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>In the context of in-device coexistence between NR and LTE V2X sidelinks (not co-channel),
++ TDM solutions are those that prevent overlapping or simultaneous NR and LTE V2X sidelink transmissions.
++ FDM solutions are those that involve simultaneous transmissions of NR and LTE V2X sidelink transmissions and defining mechanisms for sharing the total device power between the two.</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>For TDM solutions, LTE and NR V2X sidelinks are assumed to be synchronized
++ FFS accuracy of time alignment/synchronization
++ FFS alignment whether slot level and/or DFN based alignment is needed</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>For TDM solutions, the following aspects are studied in RAN1:
++ Long term time-scale coordination
+    + Potential transmissions in time of LTE and NR V2X are statically/quasi-statically determined
+    + UE behaviour when LTE and NR V2X sidelink transmissions overlap in time is FFS
++ Short time-scale coordination
+    + Transmissions in time of LTE and NR V2X are known to each RAT (details FFS)
+    + UE behaviour when LTE and NR V2X sidelink transmissions overlap in time is FFS
++ FFS coordination details
++ FFS UE assistance for coordination</p>
+
+<h1 id="3-ran1-95">3. RAN1#95</h1>
+
+<h2 id="3-1-sidelink-design">3.1. Sidelink design</h2>
+
+<h3 id="3-1-1-physical-layer-structure">3.1.1. Physical layer structure</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>At least CP-OFDM is supported.</li>
+<li>Continue study on whether to support DFT-S-OFDM including the potential issues and the following potential benefit:
+
+<ul>
+<li>Synchronization coverage enhancement</li>
+<li>PSCCH coverage enhancement, e.g., with Option 2 of PSCCH/PSSCH multiplexing with the restriction that PSCCH and PSSCH use adjacent frequency resources</li>
+<li>Feedback channel coverage enhancement</li>
+</ul></li>
+<li>A single waveform is used in all the sidelink channels in a carrier.
+
+<ul>
+<li>Note: A sequence based channel can be supported in any waveform.</li>
+<li>(Pre-)configuration will be used to determine the used waveform if the specification supports multiple waveforms.</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For PSCCH/PSSCH in FR1, NR V2X supports normal CP for 15kHz, 30kHz, 60kHz, and extended CP for 60kHz.
+
+<ul>
+<li>FFS extended CP for 30 kHz in FR1.</li>
+</ul></li>
+<li>FFS CP for PSCCH/PSSCH in FR2
+
+<ul>
+<li>E.g., NR V2X supports normal CP for 60kHz and 120kHz, and extended CP for 60kHz
+
+<ul>
+<li>FFS extended CP for 120 kHz in FR2.</li>
+</ul></li>
+</ul></li>
+<li>Only one combination of CP length and SCS is used in a carrier at a given time for NR V2X UEs communicating with each other using SL</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>BWP is defined for NR sidelink.
+
+<ul>
+<li>In a licensed carrier, SL BWP is defined separately from BWP for Uu from the specification perspective.
+
+<ul>
+<li>FFS the relation with Uu BWP.</li>
+</ul></li>
+<li>The same SL BWP is used for both Tx and Rx.</li>
+<li>Each resource pool is (pre)configured within a SL BWP.</li>
+<li>Only one SL BWP is (pre)configured for RRC idle or out of coverage NR V2X UEs in a carrier.</li>
+<li>For RRC connected UEs, only one SL BWP is active in a carrier. No signalling is exchanged in sidelink for activation and deactivation of SL BWP.
+
+<ul>
+<li><font color=brawn>Working assumption:</font> only one SL BWP is configured in a carrier for a NR V2X UE</li>
+</ul></li>
+</ul></li>
+<li>Revisit in the next meeting if significant issues are found
+
+<ul>
+<li>Numerology is a part of SL BWP configuration.</li>
+</ul></li>
+<li>Note: This does not intend to make restriction in designing the sidelink aspects related to SL BWP.</li>
+<li>Note: This does not preclude the possibility where a NR V2X UE uses a Tx RF bandwidth the same as or different than the SL BWP.</li>
+</ul>
+
+<p><font size=5 color=brawn>Working assumption:</font></p>
+
+<ul>
+<li>Regarding PSCCH / PSSCH multiplexing, at least option 3 is supported for CP-OFDM.
+
+<ul>
+<li>RAN1 assumes that transient period is not needed between symbols containing PSCCH and symbols not containing PSCCH in the supported design of option 3.</li>
+<li>FFS how to determine the starting symbol of PSCCH and the associated PSSCH</li>
+<li>FFS for other options. e.g. whether some of them are supported to increase PSCCH coverage.</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=brawn>Working assumption:</font></p>
+
+<ul>
+<li>For RAN1 evaluation purpose only, until RAN4 response on AGC and switching time, it is assumed that one symbol is used for AGC and another one symbol is used for TX/RX switching.</li>
+<li>Note: TX/RX switching includes transition in the power amplifier.</li>
+</ul>
+
+<h3 id="3-1-2-physical-layer-procedures">3.1.2. Physical layer procedures</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Physical sidelink feedback channel (PSFCH) is defined and it is supported to convey SFCI for unicast and groupcast via PSFCH.</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>When SL HARQ feedback is enabled for unicast, the following operation is supported for the non-CBG case:
+
+<ul>
+<li>Receiver UE generates HARQ-ACK if it successfully decodes the corresponding TB. It generates HARQ-NACK if it does not successfully decode the corresponding TB after decoding the associated PSCCH which targets the receiver UE.</li>
+<li>FFS whether to support SL HARQ feedback per CBG
+<br /></li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>When SL HARQ feedback is enabled for groupcast, the following operations are further studied for the non-CBG case:
+
+<ul>
+<li>Option 1: Receiver UE transmits HARQ-NACK on PSFCH if it fails to decode the corresponding TB after decoding the associated PSCCH. It transmits no signal on PSFCH otherwise. Details are FFS including the following:
+
+<ul>
+<li>Whether to introduce an additional criterion in deciding HARQ-NACK transmission</li>
+<li>Whether/how to handle DTX issue (i.e., transmitter UE cannot recognize the case that a receiver UE misses PSCCH scheduling PSSCH)</li>
+<li>Issues when multiple receiver UEs transmit HARQ-NACK on the same resource
+
+<ul>
+<li>How to determine the presence of HARQ-NACK transmissions from receiver UEs</li>
+<li>Whether/how to handle destructive channel sum effect of HARQ-NACK transmissions from multiple receiver UEs if the same signal is used</li>
+</ul></li>
+</ul></li>
+<li>Option 2: Receiver UE transmits HARQ-ACK on PSFCH if it successfully decodes the corresponding TB. It transmits HARQ-NACK on PSFCH if it does not successfully decode the corresponding TB after decoding the associated PSCCH which targets the receiver UE. Details are FFS including the following:
+
+<ul>
+<li>Whether to introduce an additional criterion in deciding HARQ-ACK/NACK transmission</li>
+<li>How to determine the PSFCH resource used by each receiver UE</li>
+</ul></li>
+<li>FFS whether to support SL HARQ feedback per CBG</li>
+<li>Other options are not precluded</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>It is supported to enable and disable SL HARQ feedback in unicast and groupcast.
+
+<ul>
+<li>FFS when HARQ feedback is enabled and disabled.</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Study further whether to support UE sending to gNB information which may trigger scheduling retransmission resource in mode 1. FFS including
+
+<ul>
+<li>Which information to send</li>
+<li>Which UE to send to gNB</li>
+<li>Which channel to use</li>
+<li>Which resource to use</li>
+</ul></li>
+</ul>
+
+<h3 id="3-1-3-synchronization-mechanism">3.1.3. Synchronization mechanism</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li><p>Confirm the working assumption that initial frequency error before synchronized to any synchronization source should be within ±5 ppm for the purpose of evaluation.
+<font size=5 color=green>Agreements:</font></p></li>
+
+<li><p>S-SSB has the same numerology, which includes SCS and CP length, as that of control and data channels for a given carrier</p></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>The transmission bandwidth for S-SSB is within the BW of the (pre)-configured SL-BWP.<br />
+
+<ul>
+<li>FFS:  The actual transmission BW for S-SSB and sync raster</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For evaluation of V2X S-SSB, the transmission bandwidth of S-SSB is in proportion to the SCS for the design of V2X S-SSB.<br />
+
+<ul>
+<li>Alt1: 24 PRBs</li>
+<li>Alt2: 20 PRBs<br /></li>
+<li>Other values are not precluded</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For the evaluation of S-PSS/S-SSS, the sequences and/or polynomials used in NR Uu PSS/SSS are used as the starting point of the NR V2X S-PSS/S-SSS design.
+
+<ul>
+<li>Others are not precluded.</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>The aspects of synchronization sequence for NR V2X to be considered for the evaluation include,</li>
+<li>The length of S-PSS and S-SSS sequences</li>
+<li>If and how to distinguish from NR Uu PSS and SSS sequences</li>
+<li>The number of NR SL-SSID targeted in the design of NR V2X S-PSS/S-SSS</li>
+<li>Use cases of NR SL-SSID should be addressed</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Using the below table as a starting point for evaluation assumptions for sidelink synchronization LLS.
+
+<ul>
+<li>Detection probability of S-PSS/S-SSS</li>
+<li>Decoding BLER of PSBCH</li>
+<li>Check further offline regarding UE speeds (absolute vs. relative, including current channel model assumptions in the TR)</li>
+<li>Discuss further offline packet size
+<br /></li>
+</ul></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Below 6GHz</th>
+<th>Above 6GHz</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Carrier Frequency</td>
+<td>6GHz</td>
+<td>30GHz</td>
+</tr>
+
+<tr>
+<td>Channel Model</td>
+<td>CDL channel models</td>
+<td></td>
+</tr>
+
+<tr>
+<td>Subcarrier Spacing(s)</td>
+<td>15, 30, 60 kHz</td>
+<td>60, 120 kHz</td>
+</tr>
+
+<tr>
+<td>SNR Range</td>
+<td>&gt; -6 dB</td>
+<td>&gt; -6 dB</td>
+</tr>
+
+<tr>
+<td>UE Speed</td>
+<td>3 km/h, 120 km/h  (mandatory)30km/h, 250 km/h (optional)</td>
+<td>3 km/hr, 120 km/h (mandatory)</td>
+</tr>
+
+<tr>
+<td>Interference model</td>
+<td>Scenario 1: no interference Scenario 2: effect of interference includes in the model</td>
+<td>Scenario 1: no interference</td>
+</tr>
+
+<tr>
+<td>Initial Frequency Offset</td>
+<td>TX: Uniform distribution within [-5, 5] ppm of nominal carrier frequencyRX: Uniform distribution within [-5, 5] ppm of nominal carrier frequency</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>The study of NR V2X synchronization includes synchronization based on S-SSB<br /></li>
+<li>The study also includes use of other sidelink signals/channels (e.g., other RSs in the SL, using PSSCH, using PSCCH, etc.) for the sidelink synchronization</li>
+</ul>
+
+<h3 id="3-1-4-resource-allocation-mechanism">3.1.4. Resource allocation mechanism</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Sensing procedure is defined as SCI decoding from other UEs and/or sidelink measurements
+
+<ul>
+<li>FFS information extracted from SCI decoding</li>
+<li>FFS sidelink measurements used</li>
+<li>FFS UE behavior and timescale of sensing procedure</li>
+<li>Note: It is up to further discussion whether SFCI is to be used in sensing procedure</li>
+<li>Note: Sensing procedure can be discussed in the context of other modes</li>
+</ul></li>
+<li>Resource (re)-selection procedure uses results of sensing procedure to determine resource(s) for sidelink transmission
+
+<ul>
+<li>FFS timescale and conditions for resource selection or re-selection</li>
+<li>FFS resource selection / re-selection details for PSCCH and PSSCH transmissions</li>
+<li>FFS details for PSFCH (e.g. whether resource (re)-selection procedure based on sensing is used or there is a dependency/association b/w PSCCH/PSSCH and PSFCH resource)</li>
+<li>FFS impact of sidelink QoS attributes on resource selection / re-selection procedure</li>
+</ul></li>
+<li>For Mode-2(a), the following schemes for resource selection are evaluated, including
+
+<ul>
+<li>Semi-persistent scheme: resource(s) are selected for multiple transmissions of different TBs</li>
+<li>Dynamic scheme: resource(s) are selected for each TB transmission</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Mode-2(b) to be studied as a functionality that can be a part of Mode-2(a)&copy;(d) operation, when one UE assists sidelink resource selection for other UE(s)</li>
+<li>Note: Mode-2(b) is not supported/studied as a standalone sidelink resource allocation mode</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For out of coverage operation, Mode-2&copy; assumes (pre)-configuration of single or multiple sidelink transmission patterns (patterns are defined on each sidelink resource pool).</li>
+<li>For in-coverage operation, Mode-2&copy; assumes that gNB configuration indicates single or multiple sidelink transmission patterns (patterns are defined on each sidelink resource pool)</li>
+<li>FFS pattern design in time and frequency for periodic and aperiodic traffic</li>
+<li>If single pattern is configured to transmitting UE there is no sensing procedure executed by UE</li>
+<li>If multiple patterns are configured to transmitting UE there is a possibility of sensing procedure executed by UE</li>
+<li>Pattern is defined as follows
+
+<ul>
+<li>Size of the resource in time and frequency</li>
+<li>Position(s) of the resource in time and frequency</li>
+<li>Number of resources</li>
+</ul></li>
+<li>FFS pattern selection procedure by UE</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For Mode-2(d) operation, further study the following potential radio-layer procedures including at least the following
+
+<ul>
+<li>Procedures to become/serve as a scheduling UE for in-coverage and out-of-coverage scenarios
+
+<ul>
+<li>The following options are identified for further study:
+
+<ul>
+<li>Scheduling UE is configured by gNB
+​    + Application layer or pre-configuration selects scheduling UE</li>
+<li>Receiver UE schedules transmissions of the transmitter UE during the session</li>
+<li>Scheduling UE is decided by multiple UEs including the one that is finally selected</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>UE may autonomously decide to serve as a scheduling UE (self-nomination) / offer scheduling UE functions</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Initialization of Mode-2(d) operation is FFS</li>
+<li>For Mode-2(d) operation, further study the following potential radio-layer procedures including at least the following
+
+<ul>
+<li>Procedure to determine a set of sidelink resources a scheduling UE can use for scheduling of other UEs
+
+<ul>
+<li>The following options are identified:
+
+<ul>
+<li>Based on sensing procedure by scheduling UE
+​    + Configured by gNB if scheduling UE is in-coverage
+​    + Pre-configured if scheduling UE is out of coverage
+​    + Transmitting UE provides information about sidelink resources to scheduling UE</li>
+</ul></li>
+</ul></li>
+<li>FFS behavior/algorithm of scheduling UE</li>
+<li>Behavior of scheduling UE to signal scheduling decisions for transmission/reception of other UEs
+
+<ul>
+<li>The following options are identified:
+
+<ul>
+<li>Physical layer signaling</li>
+<li>Higher layer signaling</li>
+</ul></li>
+</ul></li>
+<li>UE behavior to (re)-select scheduling UE(s)</li>
+<li>UE behavior to associate to scheduling UE(s)</li>
+<li>UE behavior when scheduling UE stop scheduling</li>
+<li>Resource management to address collision/interference and half-duplex issues b/w UEs scheduled by different scheduling UEs</li>
+<li>Relationship between scheduling UE and UE groups from upper layer perspective
+
+<ul>
+<li>Whether UEs from the same upper layer group are served by the same scheduling UE</li>
+</ul></li>
+<li>Resources used for communication before UE is associated with a scheduling UE</li>
+<li>Procedures to switch between Mode-2(d) from/to other submodes</li>
+</ul></li>
+</ul>
+
+<h2 id="3-2-evaluation-of-uu-for-advanced-v2x-use-cases">3.2. Evaluation of Uu for advanced V2X use cases</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>DCI is used to identify the type-2 UL configured grant to be activated or released.
+
+<ul>
+<li>FFS Single DCI for multiple type-2 UL configured grants.</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>From RAN1 perspective, NR UE reporting on Uu that include at least traffic periodicity, timing offset, and message size is beneficial at least for the purpose of managing multiple UL configured grants.</li>
+</ul>
+
+<p><font size=5 color=green>Conclusion:</font></p>
+
+<ul>
+<li>For this and future meetings, enhancements on Uu reporting for managing of Uu grants and configuration will be discussed in this AI (“Evaluation of Uu for advanced V2X use cases”).</li>
+<li>For this and future meetings, enhancements on Uu reporting for managing of SL grants and configuration will be discussed in the AI “Uu-based sidelink resource allocation/configuration”</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>NR supports UE reporting over Uu of sidelink traffic-related information.
+
+<ul>
+<li>FFS contents.</li>
+</ul></li>
+</ul>
+
+<h3 id="3-2-1-uu-based-sidelink-resource-allocation-configuration">3.2.1. Uu-based sidelink resource allocation/configuration</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>The following NR sidelink resource allocation techniques by NR Uu for mode-1 are supported:
+
+<ul>
+<li>Dynamic resource allocation</li>
+<li>Configured grant.
+
+<ul>
+<li>FFS whether type-1 and/or type-2</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>In continuing evaluating NR Uu scheduling of LTE sidelink mode-3, consider at least:
+
+<ul>
+<li>What will be required on the UE side to support such feature</li>
+<li>DCI design (e.g., whether DCI 5A can be reused)</li>
+<li>Deployment scenarios where it is beneficial</li>
+</ul></li>
+</ul>
+
+<h2 id="3-3-qos-management">3.3. QoS management</h2>
+
+<h2 id="3-4-coexistence">3.4. Coexistence</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Consider solutions for sidelink coexistence for the following:
+
+<ul>
+<li>Potential LTE V2X Tx and NR V2X Tx</li>
+<li>Potential LTE V2X Tx and NR V2X Rx</li>
+<li>Potential LTE V2X Rx and NR V2X Tx</li>
+</ul></li>
+<li>FFS the case of potential LTE V2X Rx and NR V2X Rx, e.g., whether or not it can be handled implementation</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>RAN1 will identify both TDM and FDM solutions for coexistence. The specific support for each solution is FFS.</li>
+<li>For FDM solutions:
+
+<ul>
+<li>For both dynamic and semi-static power allocation solutions, RAN1 assumes synchronization between NR and LTE V2X sidelinks, for a NR V2X UE when NR and LTE V2X sidelinks are intra-band</li>
+<li>The case of inter-band is FFS</li>
+</ul></li>
+<li>Note: If the identified solutions can be applied to systems that are not synchronized, then RAN1 may revisit this assumption.</li>
+</ul>
+
+<h1 id="4-adhoc-1901">4. Adhoc-1901</h1>
+
+<h2 id="4-1-sidelink-desgin">4.1. Sidelink desgin</h2>
+
+<h3 id="4-1-1-physical-layer-structure">4.1.1. Physical layer structure</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Confirm the working assumption
+
+<ul>
+<li>Working assumption: only one SL BWP is configured in a carrier for a NR V2X UE</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Configuration for SL BWP is separated from Uu BWP configuration signalling.
+
+<ul>
+<li>UE is not expected to use different numerology in the configured SL BWP and active UL BWP in the same carrier at a given time.</li>
+<li>FFS the time scale</li>
+<li>FFS relation to DL BWP including initial Uu BWP</li>
+<li>FFS relation in terms of frequency location and bandwidth</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For time domain resources of a resource pool for PSSCH,
+
+<ul>
+<li>Support the case where the resource pool consists of non-contiguous time resources
+
+<ul>
+<li>FFS details including granularity</li>
+</ul></li>
+</ul></li>
+<li>For frequency domain resources of a resource pool for PSSCH,
+
+<ul>
+<li>Down select following options:
+
+<ul>
+<li>Option 1: The resource pool always consists of contiguous PRBs</li>
+<li>Option 2: The resource pool can consist of non-contiguous PRBs</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Multiple DMRS patterns in time domain are supported for PSSCH
+
+<ul>
+<li>FFS: Whether a DMRS pattern is selected based on the subcarrier spacing</li>
+<li>FFS: Single or multiple DMRS pattern(s) per a resource pool</li>
+<li>FFS: How TX UE and RX UE can be aligned in terms of the DMRS pattern used for PSSCH</li>
+<li>FFS: RE mapping, sequence generation</li>
+</ul></li>
+<li>Continue to study DMRS pattern in frequency domain for PSSCH
+
+<ul>
+<li>E.g. Whether multiple patterns are supported, whether PDSCH/PUSCH DMRS configuration 1 or 2 is reused.</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Support PT-RS for PSSCH for FR2</li>
+</ul>
+
+<h3 id="4-1-2-physical-layer-procedure">4.1.2. Physical layer procedure</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Layer-1 destination ID can be explicitly included in SCI
+
+<ul>
+<li>FFS how to determine Layer-1 destination ID</li>
+<li>FFS size of Layer-1 destination ID</li>
+</ul></li>
+<li>The following additional information can be included in SCI
+
+<ul>
+<li>Layer-1 source ID
+
+<ul>
+<li>FFS how to determine Layer-1 source ID</li>
+<li>FFS size of Layer-1 source ID</li>
+</ul></li>
+<li>HARQ process ID</li>
+<li>New Data Indicator (NDI)</li>
+<li>Redundancy Version (RV)</li>
+</ul></li>
+<li>FFS whether some of the above information may not be present etc. in some operations (e.g., depending on whether they are used for unicast, groupcast, broadcast)</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For determining the resource of PSFCH containing HARQ feedback, support that the time gap between PSSCH and the associated PSFCH is not signaled via PSCCH at least for modes 2(a)&copy;(d) (if respectively supported)
+
+<ul>
+<li>FFS whether or not to additionally support other mechanism(s) for modes 2(a)&copy;(d)</li>
+<li>FFS for mode 1</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=brawn>Working assumption:</font></p>
+
+<ul>
+<li>When HARQ feedback is enabled for groupcast, support (options as identified in RAN1#95):
+
+<ul>
+<li>Option 1: Receiver UE transmits only HARQ NACK</li>
+<li>Option 2: Receiver UE transmits HARQ ACK/NACK</li>
+</ul></li>
+<li>FFS applicability of option 1 and option 2 – this part is particularly relevant to confirm (or not) the working assumption</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>It is supported that in mode 1 for unicast, the in-coverage UE sends an indication to gNB to indicate the need for retransmission
+
+<ul>
+<li>At least PUCCH is used to report the information
+
+<ul>
+<li>If feasible, RAN1 reuses PUCCH defined in Rel-15</li>
+</ul></li>
+<li>The gNB can also schedule re-transmission resource</li>
+<li>FFS transmitter UE and/or receiver UE
+
+<ul>
+<li>If receiver UE, the indication is in the form of HARQ ACK/NAK</li>
+<li>If transmitter UE, FFS</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>(Pre-)configuration indicates whether SL HARQ feedback is enabled or disabled in unicast and/or groupcast.
+
+<ul>
+<li>When (pre-)configuration enables SL HARQ feedback, FFS whether SL HARQ feedback is always used or there is additional condition of actually using SL HARQ feedback</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>SL open-loop power control is supported.
+
+<ul>
+<li>For unicast, groupcast, broadcast, it is supported that the open-loop power control is based on the pathloss between TX UE and gNB (if TX UE is in-coverage).</li>
+<li>This is at least to mitigate interference to UL reception at gNB.</li>
+<li>Rel-14 LTE sidelink open-loop power control is the baseline.</li>
+<li>gNB should be able to enable/disable this power control.</li>
+<li>At least for unicast, it is supported that the open-loop power control is also based on the pathloss between TX UE and RX UE.</li>
+<li>(Pre-)configuration should be able to enable/disable this power control.</li>
+<li>FFS whether this is applicable to groupcast</li>
+<li>FFS whether this requires information signaling in the sidelink.</li>
+<li>Further study its potential impact, e.g., on resource allocation.</li>
+<li>FFS whether closed-loop power control is additionally needed</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Long-term measurement of sidelink signal is supported at least for unicast.
+
+<ul>
+<li>Long-term measurement here means a measurement with L3 filtering.</li>
+<li>This measurement is used at least for the open-loop power control.</li>
+<li>FFS for other purpose</li>
+<li>FFS: measurement metric</li>
+<li>FFS: which signal is used</li>
+<li>FFS: whether feedback of this measurement is needed</li>
+<li>FFS whether this is applicable to groupcast</li>
+</ul></li>
+</ul>
+
+<h3 id="4-1-3-synchronization-mechanism">4.1.3. Synchronization mechanism</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For NR SLSS, as the baseline:
+
+<ul>
+<li>The sequence type for S-PSS is the same type as the M-sequence used for NR-PSS</li>
+<li>The sequence type for S-SSS is the same type as the Gold sequence for NR-SSS</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>The frequency location for S-SSB is (pre-) configured
+
+<ul>
+<li>Note: it implies that there is no intended hypothses detection in frequency location of S-SSB performed by the UE for a carrier in a given band</li>
+<li>Note: the potential frequency locations for the (pre-)configured frequency location may be restricted, up to RAN4</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Design Target for NR S-PSS/S-SSS:
+
+<ul>
+<li>At least for 15 kHz SCS NR S-PSS/S-SSS, same or better coverage to that of LTE under the same Tx/Rx configuration</li>
+<li>Coverage:  measured in terms of coupling loss
+
+<ul>
+<li>MCL = P_Tx – (NF + N_floor + SINR)</li>
+<li>N_floor = -174 +10 log (BW)</li>
+<li>P_Tx = 23 dBm</li>
+<li>NF = 9 dB</li>
+<li>SINR = -6 dB for LTE as the reference</li>
+<li>Companies to report detailed assumptions e.g. the detection method/probability/etc. for the target SINR</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For the evaluation at next meeting, sequence length of  S-PSS/S-SSS for all evaluated SCS is assumed the same as that of S-PSS/S-SSS with 15 kHz SCS
+
+<ul>
+<li>Other sequence lengths are not precluded</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Combination 1:
+
+<ul>
+<li>Time domain: 2 symbol of length-127 S-PSS, 2 symbol of length-127 S-SSS</li>
+<li>Frequency domain:11 or 12 RBs</li>
+<li>BW containing S-SSB:</li>
+<li>2.5 MHz for 15 kHz SCS</li>
+<li>5 MHz for 30 kHz SCS</li>
+<li>10 MHz for 60 kHz SCS</li>
+<li>20 MHz for 120 kHz SCS</li>
+</ul></li>
+<li>Combination 2:
+
+<ul>
+<li>Time domain: 2 symbol of length-127 S-PSS, 2 symbol of  length-127 S-SSS</li>
+<li>Frequency domain:  20 RBs</li>
+<li>BW containing S-SSB:</li>
+<li>5 MHz for 15 kHz SCS</li>
+<li>10 MHz for 30 kHz SCS</li>
+<li>20 MHz for 60 kHz SCS</li>
+<li>40 MHz for 120 kHz SCS</li>
+</ul></li>
+<li>Combination 3:
+
+<ul>
+<li>Time domain: 1 symbol of length-127 S-PSS, 1 symbol of  length-127 S-SSS</li>
+<li>Frequency domain:  20 RBs</li>
+<li>BW containing S-SSB:</li>
+<li>5 MHz for 15 kHz SCS</li>
+<li>10 MHz for 30 kHz SCS</li>
+<li>20 MHz for 60 kHz SCS</li>
+<li>40 MHz for 120 kHz SCS</li>
+</ul></li>
+<li>Combination 4:
+
+<ul>
+<li>Time domain: 1 symbol of length-255 S-PSS, 1 symbol of  length-255 S-SSS</li>
+<li>Frequency domain:  24 RBs</li>
+<li>BW containing S-SSB:</li>
+<li>5 MHz for 15 kHz SCS</li>
+<li>10 MHz for 30 kHz SCS</li>
+<li>20 MHz for 60 kHz SCS</li>
+<li>40 MHz for 120 kHz SCS</li>
+</ul></li>
+<li>Other combinations are not precluded.</li>
+<li>Note:  Company should specify the assumptions, such as total energy per SSB, when the performance results are compared between different combinations.</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>At least for single-carrier operation:
+
+<ul>
+<li>For the SL synchronization procedure, each type of synchronization reference has a respective sync priority
+
+<ul>
+<li>FFS the priority between eNB and gNB (if necessary)</li>
+</ul></li>
+<li>For the SL synchronization procedure, among the available references, a UE selects the synchronization reference with the highest priority as the reference to derive its transmission timing
+
+<ul>
+<li>FFS other potential usage</li>
+<li>FFS how to handle the case when there are two or more references of a same priority to be selected as the highest priority</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<h3 id="4-1-4-resource-allocation-mechanism">4.1.4. Resource allocation mechanism</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Mode-2 supports the sensing and resource (re)-selection procedures according to the previously agreed definitions.
+
+<ul>
+<li>FFS resource granularity for sensing &amp; resource (re)-selection, e.g., PRB(s), slots, resource patterns (when applicable), etc.</li>
+<li>FFS detailed conditions when these procedures can apply</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For the purpose of performance evaluation for Mode-2&copy;, the following Mode-2&copy; transmission pattern selection is used when a UE is configured with a pool of patterns:
+
+<ul>
+<li>Sensing based pattern selection (e.g. UE selects unused pattern based on sensing results)
+
+<ul>
+<li>Additional information to assist pattern selection is not precluded, e.g., by using UE geographical location information</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Sub-channel based resource allocation is supported for PSSCH
+
+<ul>
+<li>FFS details for sub-channels</li>
+<li>FFS other use cases for sub-channel (e.g., measurement, interaction with PSCCH, etc.)</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>SCI decoding applied during sensing procedure provides at least information on sidelink resources indicated by the UE transmitting the SCI</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>At least for the purpose of evaluation, in Mode-2(d), at least for group operation, a member UE transmits on resources configured by another UE (S-UE) within the same group
+
+<ul>
+<li>High layer signaling is assumed between S-UE and a member UE</li>
+</ul></li>
+</ul>
+
+<h2 id="4-2-evaluation-of-uu-for-advanced-v2x-use-cases">4.2. Evaluation of Uu for advanced V2X use cases</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>A UE is not expected to transmit simultaneously according to more than one UL grant (e.g., dynamic or CG) in a given BWP.</li>
+</ul>
+
+<h2 id="4-3-uu-based-sidelink-resource-allocation-configuration">4.3. Uu-based sidelink resource allocation/configuration</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>When NR Uu schedules NR SL mode 1, both type 1 and type 2 configured grants are supported for NR SL</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>LTE Uu to schedule NR sidelink mode 1 is supported:
+
+<ul>
+<li>The support is done based on type 1 configured grant with configuration restricted to time/frequency resources &amp; periodicity, with the condition that no additional function/procedure is to be introduced for LTE Uu</li>
+<li>Both DCI based scheduling and type 2 configured grant scheduling are not supported for scheduling NR sidelink mode 1</li>
+</ul></li>
+<li>Send an LS to RAN2 – Phillipe (Huawei), to be drafted in R1-1901410</li>
+</ul>
+
+<h2 id="4-4-qos-management">4.4. QoS management</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Introduce at least one congestion metric for NR sidelink
+
+<ul>
+<li>FFS details – to be done in WI phase (if included)</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Congestion control is supported at least for sidelink mode 2
+
+<ul>
+<li>Note: details of congestion control can be covered in the work item phase, not in this SI.</li>
+</ul></li>
+</ul>
+
+<h2 id="4-5-coexistence">4.5. Coexistence</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For TDM solutions for in-device coexistence between LTE and NR V2X:
+
+<ul>
+<li>Time Alignment</li>
+<li>Subframe boundary alignment is required between LTE and NR V2X sidelinks</li>
+<li>Both LTE and NR V2X sidelinks are aware of the time resource index (e.g., DFN for LTE) in both carriers</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For long term time scale TDM solutions for in-device coexistence between LTE and NR V2X:
+
+<ul>
+<li>For a UE with coexistence impact, non-overlapping (in time domain) resource pools are (pre-)configured for NR V2X and LTE V2X sidelinks
+
+<ul>
+<li>No information is exchanged between LTE and NR sidelinks within the UE</li>
+</ul></li>
+</ul></li>
+<li>Long term time scale TDM solution is feasible from RAN1 point of view
+
+<ul>
+<li>Note: although feasible, it is expected that such a solution may have impact on latency, reliability and data rate requirements for some applications</li>
+<li>No additional modifications to LTE specifications are needed
+<br /></li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Assuming SPS scheduling (mode -3 or mode-4) for LTE V2X, for short time scale TDM solutions for in-device coexistence for V2X,
+
+<ul>
+<li>For each occurrence of Tx/Tx overlap, one RAT is prioritized over another</li>
+<li>This requires some information exchange between LTE and NR sidelinks within the UE</li>
+<li>FFS: whether the information exchange between LTE and NR sidelinks can support this requirement</li>
+<li>FFS: if there is impact to RAN1 LTE specification with this agreement</li>
+<li>FFS: whether this solution can be up to UE implementation</li>
+<li>For each occurrence of Tx/Rx overlap, one RAT is prioritized over another</li>
+<li>This requires some information exchange between LTE and NR sidelinks within the UE</li>
+<li>FFS: if there is impact to RAN1 LTE specification with this agreement</li>
+<li>FFS: whether this solution can be up to UE implementation</li>
+<li>FFS: If determination of priority for Rx operation is feasible and whether the information exchange between LTE and NR sidelinks can support this requirement</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Inter-band FDM Solutions for coexistence
+
+<ul>
+<li>For static power assignment of Pc,max for each carrier</li>
+<li>Synchronization is not assumed for inter-band coexistence of NR sidelink and LTE sidelink.</li>
+<li>This FDM solution is feasible for resolution of Tx/Tx coexistence conflicts</li>
+<li>If the band separation is large enough (based on RAN4 indication), then this FDM solution for coexistence is feasible for Tx/Rx coexistence</li>
+<li>If the band separation is NOT large enough, then this FDM solution is not feasible for resolution of Tx/Rx coexistence conflicts</li>
+<li>For dynamic power sharing between carriers,</li>
+<li>FFS details of FDM solutions and whether they are feasible</li>
+</ul></li>
+</ul>
+</p>
+
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">
+            
+                
+                
+                    
+                        <a href="/tags/#5g" class="badge badge-secondary"><span>5g</span></a>
+                    
+                        <a href="/tags/#nr-v2x" class="badge badge-secondary"><span>nr-v2x</span></a>
+                    
+                
+            
+        </small>
+    </div>
+</div>
+</div>
+
+        </main><footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 col-md">
+                <h5>Zhennian&#39;s Studio</h5>
+                &copy; 2019 Zhennian Sun                
+            </div>
+            <div class="col-3 col-md">
+                <h5>&nbsp;</h5>
+                &nbsp;
+            </div>
+            <div class="col-3 col-md">
+                <h5>&nbsp;</h5>
+                &nbsp;
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="/js/vendor.min.3e5871eaa50b3aed8dc727d7e11c94314c0672556c7b4f2bd0dbf8dd0c00051f.js"></script> 
+
+</body>
+</html>
