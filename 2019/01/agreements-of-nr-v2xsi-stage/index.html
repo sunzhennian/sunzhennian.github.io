@@ -22,7 +22,7 @@
         "datePublished": "2019-01-04 13:28:01 +0800 CST",
         "dateModified" : "2019-01-04 13:28:01 +0800 CST",
         "url" : "/2019/01/agreements-of-nr-v2xsi-stage/",
-        "wordCount" : "7056",
+        "wordCount" : "8888",
         "keywords" : [ "5G","NR V2X","Blog" ]
     }
 </script>
@@ -41,7 +41,7 @@
 
 <meta itemprop="datePublished" content="2019-01-04T13:28:01&#43;08:00" />
 <meta itemprop="dateModified" content="2019-01-04T13:28:01&#43;08:00" />
-<meta itemprop="wordCount" content="7056">
+<meta itemprop="wordCount" content="8888">
 
 
 
@@ -196,6 +196,19 @@
 <li><a href="#4-4-qos-management">4.4. QoS management</a></li>
 <li><a href="#4-5-coexistence">4.5. Coexistence</a></li>
 </ul></li>
+<li><a href="#ran1-96-2019-02">RAN1#96 (2019-02)</a>
+<ul>
+<li><a href="#sidelink-design">Sidelink design</a>
+<ul>
+<li><a href="#physical-layer-structure">Physical layer structure</a></li>
+<li><a href="#physical-layer-procedure">Physical layer procedure</a></li>
+</ul></li>
+<li><a href="#synchronization-mechanism">Synchronization mechanism</a></li>
+<li><a href="#resource-allocation-mechanism">Resource allocation mechanism</a></li>
+<li><a href="#uu-based-sidelink-resource-allocation-configuration">Uu-based sidelink resource allocation/configuration</a></li>
+<li><a href="#qos-management">QoS management</a></li>
+<li><a href="#coexistence">Coexistence</a></li>
+</ul></li>
 </ul>
 </nav>
 </div>
@@ -208,7 +221,7 @@
         <h6 class="card-subtitle mb-2 text-muted">
             04.01.2019 - 
             Zhennian Sun -
-            Reading time ~34 Minutes
+            Reading time ~42 Minutes
         </h6>
         <p class="card-text">
 
@@ -1803,6 +1816,226 @@ in the physical layer aspects of at least
 <li>FFS details of FDM solutions and whether they are feasible</li>
 </ul></li>
 </ul>
+
+<h1 id="ran1-96-2019-02">RAN1#96 (2019-02)</h1>
+
+<h2 id="sidelink-design">Sidelink design</h2>
+
+<h3 id="physical-layer-structure">Physical layer structure</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   Rel-16 NR sidelink supports CP-OFDM only.</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   For PSCCH/PSSCH in FR2, NR V2X supports normal CP for 60 kHz, 120 kHz, and extended CP for 60 kHz.
+•   Note: it is understood that PSFCH follows the same CP as PSCCH/PSSCH</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   For the operation regarding PSSCH, a UE performs either transmission or reception in a slot on a carrier.
+•   NR sidelink supports for a UE:
+o   A case where all the symbols in a slot are available for sidelink.
+o   Another case where only a subset of consecutive symbols in a slot is available for sidelink
+   Note: this case is not intended to be used for the ITS spectra, if there is no forward-compatibility issue. Finalize in the WI phase whether there is such an issue or not
+   The subset is NOT dynamically indicated to the UE
+   FFS the supported slot configuration(s)
+   FFS whether/how to operate it in partial coverage scenarios</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>Proposal for agreement (discussed but no consensus reached):
+-   It is supported that a UE decodes a single SCI to receive a PSSCH.
+   FFS whether to support the case where a UE decodes two SCI to receive a PSSCH.
+Discuss further offline – especially regarding the details of 2-stage, applicability to different transmissions (unicast/broadcast/groupcast), etc.</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   At least for sidelink HARQ feedback, NR sidelink supports at least a PSFCH format which uses last symbol(s) available for sidelink in</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   RAN1 concludes that no additional physical channel needs to be defined for the purpose of discovery in Rel-16.</p>
+
+<h3 id="physical-layer-procedure">Physical layer procedure</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   (Pre-)configuration indicates the time gap between PSFCH and the associated PSSCH for Mode 1 and Mode 2.</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   In mode 1 for unicast and groupcast, it is supported for the transmitter UE via Uu link to report an indication to gNB to indicate the need for retransmission of a TB transmitted by the transmitter UE.
+o   FFS the format of the indication, e.g., in the form of HARQ ACK/NACK, or in the form of SR/BSR, etc.
+•   RAN1 continues discussion on whether to support report from the receiver UE
+o   No inter-BS communication will be considered.
+To discuss aspects related to 1st sub-bullet &amp; 2nd bullet during this week -revisit later</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   Sidelink HARQ ACK/NACK report from UE to gNB is not supported in Rel-16.</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   For unicast RX UEs, SL-RSRP is reported to TX UE
+•   For sidelink open loop power control for unicast for the TX UE, TX UE derives pathloss estimation
+o   Revisit during the WI phase w.r.t. whether or not there is a need regarding how to handle pathloss estimation for OLPC before SL-RSRP is available for a RX UE
+<font size=5 color=green>Agreements:</font></p>
+
+<p>•   TPC commands for SL PC are not supported
+<font size=5 color=green>Agreements:</font></p>
+
+<p>•   For sidelink groupcast, it is supported to use TX-RX distance and/or RSRP in deciding whether to send HARQ feedback.
+o   Details to be discussed during WI phase, including whether the information on TX-RX distance is explicitly signaled or implicitly derived, whether/how this operation is related to resource allocation, accuracy of distance and/or RSRP, the aspects related to “and/or”, etc.
+o   This feature can be disabled/enabled
+<font size=5 color=brawn>Working assumption:</font></p>
+
+<p>•   For unicast, the following CSI reporting is supported based on non-subband-based aperiodic CSI reporting mechanism assuming no more than 4-port:
+o   CQI
+o   RI
+o   PMI
+•   CSI reporting can be enabled and disabled by configuration.
+o   It is supported to configure a subset of the above metric for CSI reporting.
+•   There is no standalone RS transmission dedicated to CSI reporting in Rel-16
+•   NR sidelink CSI strives to reuse the CSI framework for NR Uu.
+o   Discuss details during WI phase
+<font size=5 color=green>Agreements:</font></p>
+
+<p>•   RAN1 concludes the following regarding beam management:
+o   Beam management is beneficial
+o   RAN1 has conducted limited study on the beam management.
+o   In FR1, it is feasible to support V2X use cases without beam management.
+o   In FR2, it is feasible to support some V2X use cases without beam management in some scenarios.
+   Panel selection is necessary to improve the communication range in FR2.
+<font size=5 color=green>Conclusion:</font></p>
+
+<p>There is no consensus in supporting beam management for normative work for NR V2X in Rel-16.</p>
+
+<h2 id="synchronization-mechanism">Synchronization mechanism</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   Whether GNSS-based synchronization or gNB/eNB-based synchronization is used is (pre)-configured.<br />
+o   The following table is a working assumption</p>
+
+<p>GNSS-based synchronization  gNB/eNB-based synchronization
+•   P0: GNSS
+•   P1: the following UE has the same priority:
+•   UE directly synchronized to GNSS
+•   P2: the following UE has the same priority:
+•   UE indirectly synchronized to GNSS
+•   P3: the remaining UEs have the lowest priority. •   P0: gNB/eNB
+•   P1’: UE directly synchronized to gNB/eNB
+•   P2’: UE indirectly synchronized to gNB/eNB
+•   P3’: GNSS
+•   P4’: UE directly synchronized to GNSS
+•   P5’: UE indirectly synchronized to GNSS
+•   P6’: the remaining UEs have the lowest priority.
+<font size=5 color=green>Agreements:</font></p>
+
+<p>•   NR V2X supports using a sidelink RS for synchronization purpose
+o   Applicable only on unlicensed (ITS) carrier with no network deployment on this carrier
+o   This RS is not a standalone RS and not part of SLSS.<br />
+o   This RS will not appear in the synchronization procedure for the selection of sync sources.
+o   RS used for the synchronization purpose would not impact any sidelink RS design
+o   FFS:  Whether this RS is DM RS or other RS
+o   FFS: Whether this could be achieved by UE implementation
+o   FFS: Specification impact</p>
+
+<h2 id="resource-allocation-mechanism">Resource allocation mechanism</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   Blind retransmissions of a TB are supported for SL by NR-V2X
+o   Details are for the WI phase</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   NR V2X Mode-2 supports reservation of sidelink resources at least for blind retransmission of a TB
+o   Whether reservation is supported for initial transmission of a TB is to be discussed in the WI phase
+o   Whether reservation is supported for potential retransmissions based on HARQ feedback is for the WI phase</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   Mode-2 sensing procedure utilizes the following sidelink measurement
+o   L1 SL-RSRP based on sidelink DMRS when the corresponding SCI is decoded
+   FFS whether/which measurement is used if the corresponding SCI is not decoded e.g. SL-RSRP after blind DMRS detection, SL-RSSI</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>In the context of Mode-2(d), NR V2X supports the following functionality:
+•   A UE informs gNB about group members and gNB provides individual resource pool configuration and/or individual resource configuration through the same UE to each group member UE within the same group. It does not require connection between member UE and gNB
+o   The UE cannot modify the configuration provided by gNB
+o   Higher layer signaling is to be used to provide the configuration. No physical layer signaling is used
+•   FFS if one or both options are supported (i.e. resource pool configuration(s) or resource configuration)
+•   FFS which functionality defined as a part of Mode-2 is applicable for this feature
+•   This functionality is up to UE capability(ies)</p>
+
+<p>5.2.    Evaluation of Uu for advanced V2X use cases
+<font size=5 color=green>Agreements:</font></p>
+
+<p>•   UE reports of assistance information to the gNB include, at least: traffic periodicity, timing offset, and message size for Uu V2X and sidelink V2X traffic (at least for periodic traffic).</p>
+
+<p><font size=5 color=green>Conclusion:</font></p>
+
+<p>•   Capture in TR 38.885 that NR Uu broadcast/multicast are beneficial at least in terms of resource utilization for V2X use cases in some scenarios.</p>
+
+<p><font size=5 color=green>Conclusion:</font></p>
+
+<p>•   To include for TR conclusion section:
+o   In terms of supporting advanced V2X uses cases over the LTE Uu interface, some possible enhancements were studied but none are recommended.
+<font size=5 color=green>Conclusion:</font></p>
+
+<p>•   Add a reference in TR 38.885 stating that the remote driving use case is handled in TR 38.824.</p>
+
+<h2 id="uu-based-sidelink-resource-allocation-configuration">Uu-based sidelink resource allocation/configuration</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   Scheduling by gNB using RRC for LTE sidelink scheduled mode is supported from RAN1 perspective under the premise that there is sufficient time for coordination between the NR and LTE modules. No DCI to activate/release
+o   RRC message delivers the SPS grant configuration and releases the SPS configuration.
+o   Support of this scheduling mode is subject to UE capability (may or may not have capability for both LTE &amp; NR)
+o   Note: some specification LTE change is needed to support the reception of a grant through RRC
+   RRC message contains mode 3 grant content and timing
+   Up to the Editor to capture it as mode 3 or new LTE sidelink mode
+o   No intention to have additional NR &amp; LTE specification change (other than those described above) for this function in Rel-16
+•   RAN1 studied the feasibility of SPS scheduling by gNB for LTE sidelink with DCI activation/release, but there is no consensus to support it</p>
+
+<h2 id="qos-management">QoS management</h2>
+
+<p><font size=5 color=green>Conclusion:</font></p>
+
+<p>•   It is deemed beneficial to report Sidelink Congestion Metrics(s) to a gNB
+o   Consequently, it is recommended to specify the corresponding details in the WI phase</p>
+
+<h2 id="coexistence">Coexistence</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   From RAN1 point of view, short term TDM solutions for NR and LTE V2X in-device coexistence is considered to be feasible for a UE when the load for the UE from LTE side and from NR side is at or below an acceptable level
+•   For each occurrence of Tx/Tx overlap and of Tx/Rx  overlap, one RAT is prioritized over another
+o   High-level principles of prioritization (e.g., BSM is deemed to have a higher priority, etc.) of LTE/NR can be discussed during the WI phase, while it is expected that detailed solutions may be left for implementation</p>
+
+<p>GM has concerns over the “e.g.” in the agreements above.
+<font size=5 color=green>Agreements:</font></p>
+
+<p>•   From RAN1 point of view, for both intra-band and inter-band Tx/Tx FDM solutions for in-device coexistence are considered to be feasible, at least if the following conditions are met:
+o   For the intra-band case for dynamic power sharing, NR and LTE transmissions are fully overlapped in the time domain, i.e., NR transmissions have to span the entire LTE TTI such that the total power across the transmissions is constant.
+•   For intra-band and inter-band FDM dynamic power sharing solutions, the following additional conditions apply:
+o   Subframe boundary alignment is required between LTE and NR V2X sidelinks
+o   Both LTE and NR V2X sidelinks are aware of the time resource index (e.g., DFN for LTE) in both carriers
+•   For purposes of dynamic power sharing between LTE and NR Tx,
+o   High-level principles of prioritization (e.g., BSM is deemed to have a higher priority, etc.) of LTE/NR can be discussed during the WI phase, while it is expected that detailed solutions may be left for implementation
+<font size=5 color=green>Agreements:</font></p>
+
+<p>•   Rx/Rx coexistence are feasible for intra- &amp; inter-band from RAN1 point of view
+o   High-level principles of Rx/Rx coexistence of LTE/NR can be discussed during the WI phase, while it is expected that detailed solutions may be left for implementation</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>•   Based on the study from physical layer specification perspective, in-device coexistence of LTE and NR sidelink is feasible for intra- &amp; inter-band under the respective conditions &amp; solutions for TX/TX, TX/RX, &amp; RX/RX
+   In the TR, also provides a reference to the respective sections</p>
 </p>
 
     </div>
