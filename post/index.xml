@@ -7,18 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Zhennian Sun</copyright>
-    <lastBuildDate>Fri, 04 Jan 2019 13:28:01 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 May 2019 15:51:31 +0800</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Agreements of NR-V2X</title>
-      <link>/2019/01/agreements-of-nr-v2x/</link>
+      <title>Agreements of NR-V2X (WI Stage)</title>
+      <link>/2019/05/agreements-of-nr-v2x-wi-stage/</link>
+      <pubDate>Wed, 15 May 2019 15:51:31 +0800</pubDate>
+      
+      <guid>/2019/05/agreements-of-nr-v2x-wi-stage/</guid>
+      <description>RAN1#96b (2019-04) Physical layer structure for sidelink Agreements: + Polar code adopted for Rel-15 NR DCI is applied to PSCCH. + LDPC codes used for Rel-15 NR DL-SCH is applied to a transport block delivered by PSSCH.
+Agreements: + The starting symbol and the number of symbols for a PSCCH are assumed to be known to the receiving UE before decoding the PSCCH.
+Agreements: + For the purpose of evaluation of PSCCH design, RAN1 assumes 60 bits, 90 bits, 120 bits as the total SCI sizes including 24 bits CRC.</description>
+    </item>
+    
+    <item>
+      <title>Agreements of NR-V2X(SI Stage)</title>
+      <link>/2019/01/agreements-of-nr-v2xsi-stage/</link>
       <pubDate>Fri, 04 Jan 2019 13:28:01 +0800</pubDate>
       
-      <guid>/2019/01/agreements-of-nr-v2x/</guid>
-      <description>1. RAN1#94 1.1. Sidelink design 1.1.1. Suport of unicast,groupcast and broadcast Agreements:
+      <guid>/2019/01/agreements-of-nr-v2xsi-stage/</guid>
+      <description>1. RAN1#94 (2019-08) 1.1. Sidelink design 1.1.1. Suport of unicast,groupcast and broadcast Agreements:
  RAN1 assumes that higher layer decides if a certain data has to be transmitted in a unicast, groupcast, or broadcast manner and inform the physical layer of the decision. For a transmission for unicast or groupcast, RAN1 assumes that the UE has established the session to which the transmission belongs to. Note that RAN1 has not made agreement about the difference among transmissions in unicast, groupcast, and broadcast manner.</description>
     </item>
     
