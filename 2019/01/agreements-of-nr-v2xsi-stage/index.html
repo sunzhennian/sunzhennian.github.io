@@ -22,7 +22,7 @@
         "datePublished": "2019-01-04 13:28:01 +0800 CST",
         "dateModified" : "2019-01-04 13:28:01 +0800 CST",
         "url" : "/2019/01/agreements-of-nr-v2xsi-stage/",
-        "wordCount" : "8810",
+        "wordCount" : "8786",
         "keywords" : [ "5G","NR V2X","Blog" ]
     }
 </script>
@@ -41,7 +41,7 @@
 
 <meta itemprop="datePublished" content="2019-01-04T13:28:01&#43;08:00" />
 <meta itemprop="dateModified" content="2019-01-04T13:28:01&#43;08:00" />
-<meta itemprop="wordCount" content="8810">
+<meta itemprop="wordCount" content="8786">
 
 
 
@@ -1857,10 +1857,17 @@ in the physical layer aspects of at least
 
 <p><font size=5 color=green>Agreements:</font></p>
 
-<p>Proposal for agreement (discussed but no consensus reached):
--   It is supported that a UE decodes a single SCI to receive a PSSCH.
-   FFS whether to support the case where a UE decodes two SCI to receive a PSSCH.
-Discuss further offline – especially regarding the details of 2-stage, applicability to different transmissions (unicast/broadcast/groupcast), etc.</p>
+<ul>
+<li>Proposal for agreement (discussed but no consensus reached):
+
+<ul>
+<li>It is supported that a UE decodes a single SCI to receive a PSSCH.
+
+<ul>
+<li>FFS whether to support the case where a UE decodes two SCI to receive a PSSCH.</li>
+</ul></li>
+</ul></li>
+</ul>
 
 <p><font size=5 color=green>Agreements:</font></p>
 
@@ -1893,9 +1900,9 @@ Discuss further offline – especially regarding the details of 2-stage, applica
 <li>RAN1 continues discussion on whether to support report from the receiver UE
 
 <ul>
-<li>No inter-BS communication will be considered.
-To discuss aspects related to 1st sub-bullet &amp; 2nd bullet during this week -revisit later</li>
+<li>No inter-BS communication will be considered.</li>
 </ul></li>
+<li>To discuss aspects related to 1st sub-bullet &amp; 2nd bullet during this week -revisit later</li>
 </ul>
 
 <p><font size=5 color=green>Agreements:</font></p>
@@ -1908,49 +1915,57 @@ To discuss aspects related to 1st sub-bullet &amp; 2nd bullet during this week -
 
 <ul>
 <li>For unicast RX UEs, SL-RSRP is reported to TX UE</li>
-
-<li><p>For sidelink open loop power control for unicast for the TX UE, TX UE derives pathloss estimation</p>
+<li>For sidelink open loop power control for unicast for the TX UE, TX UE derives pathloss estimation
 
 <ul>
-<li>Revisit during the WI phase w.r.t. whether or not there is a need regarding how to handle pathloss estimation for OLPC before SL-RSRP is available for a RX UE
-<font size=5 color=green>Agreements:</font></li>
+<li>Revisit during the WI phase w.r.t. whether or not there is a need regarding how to handle pathloss estimation for OLPC before SL-RSRP is available for a RX UE</li>
 </ul></li>
+</ul>
 
-<li><p>TPC commands for SL PC are not supported
-<font size=5 color=green>Agreements:</font></p></li>
+<p><font size=5 color=green>Agreements:</font></p>
 
-<li><p>For sidelink groupcast, it is supported to use TX-RX distance and/or RSRP in deciding whether to send HARQ feedback.</p>
+<ul>
+<li>TPC commands for SL PC are not supported</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For sidelink groupcast, it is supported to use TX-RX distance and/or RSRP in deciding whether to send HARQ feedback.
 
 <ul>
 <li>Details to be discussed during WI phase, including whether the information on TX-RX distance is explicitly signaled or implicitly derived, whether/how this operation is related to resource allocation, accuracy of distance and/or RSRP, the aspects related to “and/or”, etc.</li>
-<li>This feature can be disabled/enabled
-<font size=5 color=brawn>Working assumption:</font></li>
+<li>This feature can be disabled/enabled</li>
 </ul></li>
+</ul>
 
-<li><p>For unicast, the following CSI reporting is supported based on non-subband-based aperiodic CSI reporting mechanism assuming no more than 4-port:</p>
+<p><font size=5 color=brawn>Working assumption:</font></p>
+
+<ul>
+<li>For unicast, the following CSI reporting is supported based on non-subband-based aperiodic CSI reporting mechanism assuming no more than 4-port:
 
 <ul>
 <li>CQI</li>
 <li>RI</li>
 <li>PMI</li>
 </ul></li>
-
-<li><p>CSI reporting can be enabled and disabled by configuration.</p>
+<li>CSI reporting can be enabled and disabled by configuration.
 
 <ul>
 <li>It is supported to configure a subset of the above metric for CSI reporting.</li>
 </ul></li>
-
-<li><p>There is no standalone RS transmission dedicated to CSI reporting in Rel-16</p></li>
-
-<li><p>NR sidelink CSI strives to reuse the CSI framework for NR Uu.</p>
+<li>There is no standalone RS transmission dedicated to CSI reporting in Rel-16</li>
+<li>NR sidelink CSI strives to reuse the CSI framework for NR Uu.
 
 <ul>
-<li>Discuss details during WI phase
-<font size=5 color=green>Agreements:</font></li>
+<li>Discuss details during WI phase</li>
 </ul></li>
+</ul>
 
-<li><p>RAN1 concludes the following regarding beam management:</p>
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>RAN1 concludes the following regarding beam management:
 
 <ul>
 <li>Beam management is beneficial</li>
@@ -1959,13 +1974,16 @@ To discuss aspects related to 1st sub-bullet &amp; 2nd bullet during this week -
 <li>In FR2, it is feasible to support some V2X use cases without beam management in some scenarios.
 
 <ul>
-<li>Panel selection is necessary to improve the communication range in FR2.
-<font size=5 color=green>Conclusion:</font></li>
+<li>Panel selection is necessary to improve the communication range in FR2.</li>
 </ul></li>
 </ul></li>
 </ul>
 
-<p>There is no consensus in supporting beam management for normative work for NR V2X in Rel-16.</p>
+<p><font size=5 color=green>Conclusion:</font></p>
+
+<ul>
+<li>There is no consensus in supporting beam management for normative work for NR V2X in Rel-16.</li>
+</ul>
 
 <h2 id="5-2-synchronization-mechanism">5.2. Synchronization mechanism</h2>
 
@@ -1995,7 +2013,7 @@ To discuss aspects related to 1st sub-bullet &amp; 2nd bullet during this week -
 <font size=5 color=green>Agreements:</font></p>
 
 <ul>
-<li><p>NR V2X supports using a sidelink RS for synchronization purpose</p>
+<li>NR V2X supports using a sidelink RS for synchronization purpose
 
 <ul>
 <li>Applicable only on unlicensed (ITS) carrier with no network deployment on this carrier</li>
@@ -2004,15 +2022,16 @@ To discuss aspects related to 1st sub-bullet &amp; 2nd bullet during this week -
 <li>RS used for the synchronization purpose would not impact any sidelink RS design</li>
 <li>FFS:  Whether this RS is DM RS or other RS</li>
 <li>FFS: Whether this could be achieved by UE implementation</li>
-
-<li><p>FFS: Specification impact</p>
+<li>FFS: Specification impact</li>
+</ul></li>
+</ul>
 
 <h2 id="5-3-resource-allocation-mechanism">5.3. Resource allocation mechanism</h2>
 
-<p><font size=5 color=green>Agreements:</font></p></li>
-</ul></li>
+<p><font size=5 color=green>Agreements:</font></p>
 
-<li><p>Blind retransmissions of a TB are supported for SL by NR-V2X</p>
+<ul>
+<li>Blind retransmissions of a TB are supported for SL by NR-V2X
 
 <ul>
 <li>Details are for the WI phase</li>
@@ -2046,13 +2065,21 @@ To discuss aspects related to 1st sub-bullet &amp; 2nd bullet during this week -
 
 <p><font size=5 color=green>Agreements:</font></p>
 
-<p>In the context of Mode-2(d), NR V2X supports the following functionality:
-+   A UE informs gNB about group members and gNB provides individual resource pool configuration and/or individual resource configuration through the same UE to each group member UE within the same group. It does not require connection between member UE and gNB
-    +   The UE cannot modify the configuration provided by gNB
-    +   Higher layer signaling is to be used to provide the configuration. No physical layer signaling is used
-+   FFS if one or both options are supported (i.e. resource pool configuration(s) or resource configuration)
-+   FFS which functionality defined as a part of Mode-2 is applicable for this feature
-+   This functionality is up to UE capability(ies)</p>
+<ul>
+<li>In the context of Mode-2(d), NR V2X supports the following functionality:
+
+<ul>
+<li>A UE informs gNB about group members and gNB provides individual resource pool configuration and/or individual resource configuration through the same UE to each group member UE within the same group. It does not require connection between member UE and gNB
+
+<ul>
+<li>The UE cannot modify the configuration provided by gNB</li>
+<li>Higher layer signaling is to be used to provide the configuration. No physical layer signaling is used</li>
+</ul></li>
+<li>FFS if one or both options are supported (i.e. resource pool configuration(s) or resource configuration)</li>
+<li>FFS which functionality defined as a part of Mode-2 is applicable for this feature</li>
+<li>This functionality is up to UE capability(ies)</li>
+</ul></li>
+</ul>
 
 <p>5.2.    Evaluation of Uu for advanced V2X use cases
 <font size=5 color=green>Agreements:</font></p>
@@ -2124,10 +2151,10 @@ To discuss aspects related to 1st sub-bullet &amp; 2nd bullet during this week -
 <ul>
 <li>High-level principles of prioritization (e.g., BSM is deemed to have a higher priority, etc.) of LTE/NR can be discussed during the WI phase, while it is expected that detailed solutions may be left for implementation</li>
 </ul></li>
+<li>GM has concerns over the “e.g.” in the agreements above.</li>
 </ul>
 
-<p>GM has concerns over the “e.g.” in the agreements above.
-<font size=5 color=green>Agreements:</font></p>
+<p><font size=5 color=green>Agreements:</font></p>
 
 <ul>
 <li>From RAN1 point of view, for both intra-band and inter-band Tx/Tx FDM solutions for in-device coexistence are considered to be feasible, at least if the following conditions are met:
