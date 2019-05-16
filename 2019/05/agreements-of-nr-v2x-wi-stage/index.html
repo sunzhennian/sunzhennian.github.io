@@ -22,7 +22,7 @@
         "datePublished": "2019-05-15 15:51:31 +0800 CST",
         "dateModified" : "2019-05-15 15:51:31 +0800 CST",
         "url" : "/2019/05/agreements-of-nr-v2x-wi-stage/",
-        "wordCount" : "1275",
+        "wordCount" : "2092",
         "keywords" : [ "5G","NR V2X","Blog" ]
     }
 </script>
@@ -43,7 +43,7 @@
 
 <meta itemprop="datePublished" content="2019-05-15T15:51:31&#43;08:00" />
 <meta itemprop="dateModified" content="2019-05-15T15:51:31&#43;08:00" />
-<meta itemprop="wordCount" content="1275">
+<meta itemprop="wordCount" content="2092">
 
 
 
@@ -197,7 +197,7 @@ table, td, th
         <h6 class="card-subtitle mb-2 text-muted">
             15.05.2019 - 
             Zhennian Sun -
-            Reading time ~6 Minutes
+            Reading time ~10 Minutes
         </h6>
         <p class="card-text">
 
@@ -491,9 +491,27 @@ table, td, th
 
 <p><font size=5 color=green>Agreements:</font></p>
 
-<p><font size=5 color=green>Agreements:</font></p>
+<ul>
+<li>A sequence-based PSFCH format with one symbol (not including AGC training period) is supported.
 
-<p><font size=5 color=brawn>Working assumption:</font></p>
+<ul>
+<li>This is applicable for unicast and groupcast including options <sup>1</sup>&frasl;<sub>2</sub>.</li>
+<li>Sequence of PUCCH format 0 is the starting point.</li>
+<li>FFS: 1 PRB or multiple PRBs is/are used for this PSFCH format</li>
+<li>FFS: feasible number of HARQ-ACK bits, mapping of HARQ-ACK bit</li>
+</ul></li>
+<li>FFS whether to support the following formats
+
+<ul>
+<li>X-symbol PSFCH format with a repetition of the one-symbol PSFCH format (not including AGC training period).
+
+<ul>
+<li>E.g. X=2</li>
+</ul></li>
+<li>A PSFCH format based on PUCCH format 2</li>
+<li>A PSFCH format spanning all available symbols for sidelink in a slot</li>
+</ul></li>
+</ul>
 
 <p><font size=5 color=green>Agreements:</font></p>
 
@@ -503,15 +521,175 @@ table, td, th
 
 <h3 id="2-2-2-mode-2">2.2.2. Mode 2</h3>
 
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>NR V2X Mode-2 supports resource reservation for feedback-based PSSCH retransmissions by signaling associated with a prior transmission of the same TB
+
+<ul>
+<li>FFS impact on subsequent sensing and resource selection procedures</li>
+<li>At least from the transmitter perspective of this TB, usage of HARQ feedback for release of unused resource(s) is supported
+
+<ul>
+<li>No additional signaling is defined for the purpose of release of unused resources by the transmitting UE</li>
+<li>FFS the behavior of the receiver UE(s) of this TB and other UEs</li>
+</ul></li>
+</ul></li>
+</ul>
+
 <h2 id="2-3-sidelink-synchronization-mechanism">2.3. Sidelink synchronization mechanism</h2>
+
+<p><font size=5 color=brawn>Working assumption:</font></p>
+
+<ul>
+<li>For the NR SLSS,
+
+<ul>
+<li>Same sequence is used for both symbols of S-PSS</li>
+<li>Same sequence is used for both symbols of S-SSS</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>The impact on detection probability performance of having or not having a transient period between S-PSS and S-SSS symbols is used to evaluate the following:
+
+<ul>
+<li>Alt 1: S-PSS symbols and S-SSS symbols are adjacent.</li>
+<li>Alt 2: S-PSS symbols and S-SSS symbols are not adjacent.</li>
+</ul></li>
+<li>FFS (aim to conclude this week)
+
+<ul>
+<li>The power difference between S-PSS and S-SSS symbols.</li>
+<li>The transient duration.</li>
+</ul></li>
+</ul>
 
 <h2 id="2-4-in-device-coexistence-between-lte-and-nr-sidelinks">2.4. In-device coexistence between LTE and NR sidelinks</h2>
 
 <h2 id="2-5-physical-layer-procedures-for-sidelink">2.5. Physical layer procedures for sidelink</h2>
 
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For sidelink transmit power control,
+
+<ul>
+<li>Total sidelink transmit power is the same in the symbols used for PSCCH/PSSCH transmissions in a slot.
+
+<ul>
+<li>FFS whether/how to handle simultaneous transmission of sidelink and uplink</li>
+</ul></li>
+<li>The maximum SL transmit power is (pre-)configured to the TX UE.
+
+<ul>
+<li>FFS on details (e.g., whether the maximum power is dependent of parameters such as the priority of PSCCH/PSSCH)</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For the SL open-loop power control, a UE can be configured to use DL pathloss (between TX UE and gNB) only, SL pathloss (between TX UE and RX UE) only, or both DL pathloss and SL pathloss.</li>
+<li>When the SL open-loop power control is configured to use both DL pathloss and SL pathloss
+
+<ul>
+<li>The minimum of the power values given by open-loop power control based on DL pathloss and the open-loop power control based on SL pathloss is taken.
+
+<ul>
+<li>(Working assumption) P0 and alpha values are separately (pre-)configured for DL pathloss and SL pathloss.</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For at least option 1 based TX-RX distance-based HARQ feedback for groupcast,
+
+<ul>
+<li>A UE transmits HARQ feedback for the PSSCH if TX-RX distance is smaller or equal to the communication range requirement. Otherwise, the UE does not transmit HARQ feedback for the PSSCH
+
+<ul>
+<li>TX UE’s location is indicated by SCI associated with the PSSCH.
+
+<ul>
+<li>Details FFS</li>
+</ul></li>
+<li>The TX-RX distance is estimated by RX UE based on its own location and TX UE location.</li>
+<li>The used communication range requirement for a PSSCH is known after decoding SCI associated with the PSSCH
+
+<ul>
+<li>FFS implicit or explicit</li>
+</ul></li>
+<li>FFS how to define location</li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For the period of N slot(s) of PSFCH resource, N=2 and N=4 are additionally supported.</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For a PSSCH transmission with its last symbol in slot n, when the corresponding HARQ feedback is due for transmission, it is expected to be in slot n+a where a is the smallest integer larger than or equal to K with the condition that slot n+a contains PSFCH resources.
+
+<ul>
+<li>FFS details of K</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>At least for the case when the PSFCH in a slot is in response to a single PSSCH:
+
+<ul>
+<li>Implicit mechanism is used to determine at least frequency and/or code domain resource of PSFCH, within a configured resource pool. At least the following parameters are used in the implicit mechanism:
+
+<ul>
+<li>Slot index (FFS details) associated with PSCCH/PSSCH/PSFCH</li>
+<li>Sub-channel(s) (FFS details) associated with PSCCH/PSSCH</li>
+<li>Identifier (FFS details) to distinguish each RX UE in a group for Option 2 groupcast HARQ feedback</li>
+<li>FFS detailed applicability of the above parameters</li>
+<li>FFS: Other parameters (e.g. SL-RSRP/SINR, Layer-1 source ID, location information, etc.)</li>
+</ul></li>
+</ul></li>
+</ul>
+
 <h2 id="2-6-qos-management-for-sidelink">2.6. QoS management for sidelink</h2>
 
 <h2 id="2-7-support-of-nr-uu-controlling-lte-sidelink">2.7. Support of NR Uu controlling LTE sidelink</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>RRC-based activation/deactivation is not supported</li>
+<li>DCI-based activation/deactivation is supported
+
+<ul>
+<li>Support of LTE PC5 scheduling by NR Uu (mode 3-like ) is based on UE capability</li>
+<li>NR DCI provides the fields of DCI 5A in LTE-V that are related to SPS scheduling</li>
+<li>The size of DCI for activation/deactivation is one of the DCI size(s) that will be defined for NR Uu scheduling NR V2V
+
+<ul>
+<li>FFS whether the DCI format is the same as one of the DCI formats that will be defined for NR Uu scheduling NR V2V</li>
+</ul></li>
+<li>Activation/deactivation applies to the first LTE subframe after Z+X ms after receiving the DCI
+
+<ul>
+<li>Z is the same timing offset in current LTE V2X specs</li>
+<li>X&gt;0. FFS value(s) of X, and if one or multiple values of X are possible</li>
+</ul></li>
+</ul></li>
+</ul>
 
 <h2 id="2-8-rlm-rlf">2.8. RLM/RLF</h2>
 </p>
