@@ -22,7 +22,7 @@
         "datePublished": "2019-05-15 15:51:31 +0800 CST",
         "dateModified" : "2019-05-15 15:51:31 +0800 CST",
         "url" : "/2019/05/agreements-of-nr-v2x-wi-stage/",
-        "wordCount" : "2092",
+        "wordCount" : "2643",
         "keywords" : [ "5G","NR V2X","Blog" ]
     }
 </script>
@@ -43,7 +43,7 @@
 
 <meta itemprop="datePublished" content="2019-05-15T15:51:31&#43;08:00" />
 <meta itemprop="dateModified" content="2019-05-15T15:51:31&#43;08:00" />
-<meta itemprop="wordCount" content="2092">
+<meta itemprop="wordCount" content="2643">
 
 
 
@@ -197,7 +197,7 @@ table, td, th
         <h6 class="card-subtitle mb-2 text-muted">
             15.05.2019 - 
             Zhennian Sun -
-            Reading time ~10 Minutes
+            Reading time ~13 Minutes
         </h6>
         <p class="card-text">
 
@@ -515,9 +515,59 @@ table, td, th
 
 <p><font size=5 color=green>Agreements:</font></p>
 
+<ul>
+<li><p>Transmission of PSSCH is mapped onto contiguous PRBs only
+<font size=5 color=green>Agreements:</font></p></li>
+
+<li><p>Sub-channel size is (pre)configurable.</p>
+
+<ul>
+<li>FFS details (e.g., possible sizes, a minimum size etc.)</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Working assumption:</font></p>
+
+<ul>
+<li>Rel-15 PDSCH DMRS Configuration type 1 and/or type 2 are reused for frequency-domain pattern of PSSCH DMRS.
+
+<ul>
+<li>FFS whether to support either one or both types</li>
+<li>FFS details on multiplexing of different ports for PSSCH DMRS</li>
+</ul></li>
+</ul>
+
 <h2 id="2-2-resource-allocation-for-nr-sidelink">2.2. Resource allocation for NR sidelink</h2>
 
 <h3 id="2-2-1-mode-1">2.2.1. Mode 1</h3>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Sidelink HARQ ACK/NACK report from transmitter UE to gNB is supported with details FFS.
+Note: this reverts the following agreement from RAN1#96:
+
+<ul>
+<li>Sidelink HARQ ACK/NACK report from UE to gNB is not supported in Rel-16.</li>
+</ul></li>
+<li>SR/BSR report to gNB for the purpose of requesting resources for HARQ retransmission is not supported.</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>NR sidelink does not support performing different transmissions of a TB using different configured grants.</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For mode 1:
+
+<ul>
+<li>A dynamic grant by the gNB provides resources for transmission of PSCCH and PSSCH.</li>
+</ul></li>
+</ul>
 
 <h3 id="2-2-2-mode-2">2.2.2. Mode 2</h3>
 
@@ -535,6 +585,49 @@ table, td, th
 <li>FFS the behavior of the receiver UE(s) of this TB and other UEs</li>
 </ul></li>
 </ul></li>
+</ul>
+
+<p><font size=5 color=green>Conclusions:</font></p>
+
+<ul>
+<li>RAN1 to discuss further the following
+
+<ul>
+<li>Maximum number of blind retransmissions supported for one TB</li>
+<li>Maximum number of reserved blind retransmission</li>
+<li>Maximum number of HARQ feedback-based retransmissions supported for one TB</li>
+<li>Maximum number of reserved HARQ feedback-based retransmission</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>RAN1 to further select between the following options of sidelink resource reservation for blind retransmissions:
+
+<ul>
+<li>Option 1: A transmission can reserve resources for none, one, or more than one blind retransmission</li>
+<li>Option 2: A transmission can reserve resource for none or one blind retransmission</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Resource selection window is defined as a time interval where a UE selects sidelink resources for transmission
+
+<ul>
+<li>The resource selection window starts T1 ≥ 0 after a resource (re-)selection trigger and is bounded by at least a remaining packet delay budget</li>
+<li>FFS T1 value, whether it is measured in slots, symbols, ms, etc.</li>
+<li>FFS other conditions</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Support a sub-channel as the minimum granularity in frequency domain for the sensing for PSSCH resource selection</li>
+<li>No additional sensing for other channels</li>
 </ul>
 
 <h2 id="2-3-sidelink-synchronization-mechanism">2.3. Sidelink synchronization mechanism</h2>
@@ -567,7 +660,58 @@ table, td, th
 </ul></li>
 </ul>
 
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>The following parameters are assumed for evaluation:
++   Power Difference for S-PSS and S-SSS symbols:
+   +   Opt.1) MPR values: S-PSS = 0 dB, S-SSS = 3 dB;
+   +   Opt.2) MPR values: S-PSS = 3 dB, S-SSS = 3 dB
+   +   Opt.3) companies to report the assumed MPR values
++   Transient period is
+   +   10us for FR1; 5us for FR2
+   +   Waveform puncturing during the transient period
++   S-PSS detection search window: 80ms and 160ms</p>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>In NR V2X, from transmitter perspective, the period (P1 in unit of ms) of S-SSB(s) transmission is the same for all SCS, for further down-selection:
+
+<ul>
+<li>Alt 1: the number of S-SSB(s) transmitted within P1is (pre-)configurable.</li>
+<li>Alt 2: the number of S-SSB(s) transmitted is fixed within P1 per SCS.</li>
+<li>Alt 3: only one S-SSB for all SCS is transmitted within P1.</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<p>At least for evaluation, one S-SSB transmission with at least the following periodicity:
++   160ms period at least for 15kHz SCS.
++   FFS other value(s)</p>
+
 <h2 id="2-4-in-device-coexistence-between-lte-and-nr-sidelinks">2.4. In-device coexistence between LTE and NR sidelinks</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For Tx/Tx overlap,
+
+<ul>
+<li>Confirm the working assumption made in RAN1#96bis</li>
+<li>UE capability is defined for short-term time-scale TDM for in-device coexistence</li>
+</ul></li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>For Rx/Rx overlap,
+
+<ul>
+<li>Up to UE implementation to manage receptions of LTE and NR sidelinks.</li>
+</ul></li>
+</ul>
 
 <h2 id="2-5-physical-layer-procedures-for-sidelink">2.5. Physical layer procedures for sidelink</h2>
 
@@ -666,6 +810,18 @@ table, td, th
 
 <h2 id="2-6-qos-management-for-sidelink">2.6. QoS management for sidelink</h2>
 
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>LTE V2X sidelink congestion control is the starting point for defining NR sidelink congestion control.</li>
+</ul>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>Higher-layer reporting of CBR to the gNB is supported for RRC_CONNECTED UEs.</li>
+</ul>
+
 <h2 id="2-7-support-of-nr-uu-controlling-lte-sidelink">2.7. Support of NR Uu controlling LTE sidelink</h2>
 
 <p><font size=5 color=green>Agreements:</font></p>
@@ -692,6 +848,12 @@ table, td, th
 </ul>
 
 <h2 id="2-8-rlm-rlf">2.8. RLM/RLF</h2>
+
+<p><font size=5 color=green>Agreements:</font></p>
+
+<ul>
+<li>No standalone RS dedicated to SL RLM/RLF in Rel-16</li>
+</ul>
 </p>
 
     </div>
