@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lte on Zhennian&#39;s Studio</title>
+    <link>/tags/lte/</link>
+    <description>Recent content in Lte on Zhennian&#39;s Studio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Zhennian Sun</copyright>
+    <lastBuildDate>Thu, 01 Aug 2019 10:58:22 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/lte/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>UE Procedure Related to Sidelink(36.213)</title>
+      <link>/2019/08/ue-procedure-related-to-sidelink36.213/</link>
+      <pubDate>Thu, 01 Aug 2019 10:58:22 +0800</pubDate>
+      
+      <guid>/2019/08/ue-procedure-related-to-sidelink36.213/</guid>
+      <description>PSSCH UE procedure for transmitting PSSCH UE procedure for receiving PSSCH UE procedure for determining resource block pool for PSSCH in sidelink transmission mode 3 and 4 PSCCH UE procedure for transmitting PSCCH For sidelink transmission mode 3, the UE shall determine the subframes and resource blocks for transmitting SCI format 1 as follows: + SCI format 1 is transmitted in two PRBs per slot in each subframe where the corresponding PSSCH is transmitted + If UE receives DCI format 5A in subframe $n$ with CRC scrambled by SL-V-RNTI, one transmission of PSCCH is in the PSCCH resources $L{Init}$ in the first subframe that is included in $(t{0}^{SL},t{1}^{SL},t{2}^{SL},&amp;hellip;))$ and that starts not earlier than $T{DL}-\frac{N{TA}}{2}\cdot Ts+(4+m)\cdot 10^{-3}$.</description>
+    </item>
+    
+  </channel>
+</rss>

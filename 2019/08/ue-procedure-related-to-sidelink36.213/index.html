@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <meta charset="utf-8"><script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "/"
+        },
+        "articleSection" : "post",
+        "name" : "UE Procedure Related to Sidelink(36.213)",
+        "headline" : "UE Procedure Related to Sidelink(36.213)",
+        "description" : "Text about the site""
+        "inLanguage" : "en",
+        "author" : "Zhennian Sun",
+        "creator" : "Zhennian Sun",
+        "publisher": "Zhennian Sun",
+        "accountablePerson" : "Zhennian Sun",
+        "copyrightHolder" : "Zhennian Sun",
+        "copyrightYear" : "2019",
+        "datePublished": "2019-08-01 10:58:22 +0800 CST",
+        "dateModified" : "2019-08-01 10:58:22 +0800 CST",
+        "url" : "/2019/08/ue-procedure-related-to-sidelink36.213/",
+        "wordCount" : "905",
+        "keywords" : [ "LTE","V2X","Blog" ]
+    }
+</script>
+<title>
+    UE Procedure Related to Sidelink(36.213) &ndash; Zhennian&#39;s Studio
+</title><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="favicon.ico">
+
+
+<meta itemprop="name" content="UE Procedure Related to Sidelink(36.213)">
+<meta itemprop="description" content="PSSCH UE procedure for transmitting PSSCH UE procedure for receiving PSSCH UE procedure for determining resource block pool for PSSCH in sidelink transmission mode 3 and 4 PSCCH UE procedure for transmitting PSCCH For sidelink transmission mode 3, the UE shall determine the subframes and resource blocks for transmitting SCI format 1 as follows: &#43; SCI format 1 is transmitted in two PRBs per slot in each subframe where the corresponding PSSCH is transmitted &#43; If UE receives DCI format 5A in subframe $n$ with CRC scrambled by SL-V-RNTI, one transmission of PSCCH is in the PSCCH resources $L{Init}$ in the first subframe that is included in $(t{0}^{SL},t{1}^{SL},t{2}^{SL},&hellip;))$ and that starts not earlier than $T{DL}-\frac{N{TA}}{2}\cdot Ts&#43;(4&#43;m)\cdot 10^{-3}$.">
+
+
+<meta itemprop="datePublished" content="2019-08-01T10:58:22&#43;08:00" />
+<meta itemprop="dateModified" content="2019-08-01T10:58:22&#43;08:00" />
+<meta itemprop="wordCount" content="905">
+
+
+
+<meta itemprop="keywords" content="LTE,V2X," />
+
+<meta property="og:title" content="UE Procedure Related to Sidelink(36.213)" />
+<meta property="og:description" content="PSSCH UE procedure for transmitting PSSCH UE procedure for receiving PSSCH UE procedure for determining resource block pool for PSSCH in sidelink transmission mode 3 and 4 PSCCH UE procedure for transmitting PSCCH For sidelink transmission mode 3, the UE shall determine the subframes and resource blocks for transmitting SCI format 1 as follows: &#43; SCI format 1 is transmitted in two PRBs per slot in each subframe where the corresponding PSSCH is transmitted &#43; If UE receives DCI format 5A in subframe $n$ with CRC scrambled by SL-V-RNTI, one transmission of PSCCH is in the PSCCH resources $L{Init}$ in the first subframe that is included in $(t{0}^{SL},t{1}^{SL},t{2}^{SL},&hellip;))$ and that starts not earlier than $T{DL}-\frac{N{TA}}{2}\cdot Ts&#43;(4&#43;m)\cdot 10^{-3}$." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/2019/08/ue-procedure-related-to-sidelink36.213/" /><meta property="article:published_time" content="2019-08-01T10:58:22&#43;08:00"/>
+<meta property="article:modified_time" content="2019-08-01T10:58:22&#43;08:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="UE Procedure Related to Sidelink(36.213)"/>
+<meta name="twitter:description" content="PSSCH UE procedure for transmitting PSSCH UE procedure for receiving PSSCH UE procedure for determining resource block pool for PSSCH in sidelink transmission mode 3 and 4 PSCCH UE procedure for transmitting PSCCH For sidelink transmission mode 3, the UE shall determine the subframes and resource blocks for transmitting SCI format 1 as follows: &#43; SCI format 1 is transmitted in two PRBs per slot in each subframe where the corresponding PSSCH is transmitted &#43; If UE receives DCI format 5A in subframe $n$ with CRC scrambled by SL-V-RNTI, one transmission of PSCCH is in the PSCCH resources $L{Init}$ in the first subframe that is included in $(t{0}^{SL},t{1}^{SL},t{2}^{SL},&hellip;))$ and that starts not earlier than $T{DL}-\frac{N{TA}}{2}\cdot Ts&#43;(4&#43;m)\cdot 10^{-3}$."/>
+
+
+<link rel="alternate" href="/index.xml" type="application/rss+xml" title="Zhennian&#39;s Studio"/>
+
+
+
+
+
+<link rel="stylesheet" href="/css/vendor.min.05b46011155441432c1f57b66ddf9d330468154e087ecb0be34006846476f55b.css" integrity="sha256-BbRgERVUQUMsH1e2bd&#43;dMwRoFU4IfssL40AGhGR29Vs="><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      showProcessingMessages: false,
+      messageStyle: "none",
+      extensions: ["tex2jax.js"],
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: {
+          inlineMath:  [ ["$", "$"] ],
+          displayMath: [ ["$$","$$"] ],
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
+          ignoreClass:"comment-content"
+      },
+      "HTML-CSS": {
+          availableFonts: ["STIX","TeX"],
+          showMathMenu: false
+      }
+  });
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+  </script>
+  <script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-7691209-1']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+              var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+              ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+              var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+          document.addEventListener('DOMContentLoaded',function() {
+              document.getElementById("table-of-contents").onclick = function() {
+                  var elem = document.getElementById("text-table-of-contents");
+                  elem.style.display = elem.style.display == "block" ? "none" : "block";
+              }
+          });
+        
+          var url = document.location.href;
+          var orgsource = url.substring(0, url.lastIndexOf("."))+".org.html";
+          function show_org_source(){
+              document.location.href = orgsource;
+          }
+        </script>
+<style type="text/css">
+table
+  {
+  border-collapse:collapse;
+  }
+
+table, td, th
+  {
+  border:1px solid black;
+  }
+</style><body><nav class="navbar navbar-light navbar-expand-lg bg-white border-bottom shadow-sm">
+        
+    <div class="container">
+        <a class="navbar-brand text-primary" href="/">Zhennian&#39;s Studio</a>
+        <a class="navbar-brand text-primary" >              </a>
+        <a class="navbar-brand text-primary" href="/categories/">Categories</a>
+        <a class="navbar-brand text-primary" >              </a>
+        <a class="navbar-brand text-primary" href="/tags/">Tags</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarCollapse">
+
+            <ul class="navbar-nav mr-auto">
+                
+                
+            </ul>
+
+            
+        </div>
+    </div>
+</nav>
+<main role="main">
+<div id="table-of-contents">
+    <h2>TOC</h2>
+    </header>
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#pssch">PSSCH</a>
+<ul>
+<li><a href="#ue-procedure-for-transmitting-pssch">UE procedure for transmitting PSSCH</a></li>
+<li><a href="#ue-procedure-for-receiving-pssch">UE procedure for receiving PSSCH</a></li>
+<li><a href="#ue-procedure-for-determining-resource-block-pool-for-pssch-in-sidelink-transmission-mode-3-and-4">UE procedure for determining resource block pool for PSSCH in sidelink transmission mode 3 and 4</a></li>
+</ul></li>
+<li><a href="#pscch">PSCCH</a>
+<ul>
+<li><a href="#ue-procedure-for-transmitting-pscch">UE procedure for transmitting PSCCH</a></li>
+<li><a href="#ue-procedure-for-receiving-pscch">UE procedure for receiving PSCCH</a></li>
+<li><a href="#ue-procedure-for-determining-resource-block-pool-for-pscch-in-sidelink-transmission-mode-3-and-4">UE procedure for determining resource block pool for PSCCH in sidelink transmission mode 3 and 4</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<div class="container mt-3 mb-3">
+
+
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title"><a href="/2019/08/ue-procedure-related-to-sidelink36.213/">UE Procedure Related to Sidelink(36.213)</a></h1>
+        <h6 class="card-subtitle mb-2 text-muted">
+            01.08.2019 - 
+            Zhennian Sun -
+            Reading time ~5 Minutes
+        </h6>
+        <p class="card-text">
+
+<h1 id="pssch">PSSCH</h1>
+
+<h2 id="ue-procedure-for-transmitting-pssch">UE procedure for transmitting PSSCH</h2>
+
+<h2 id="ue-procedure-for-receiving-pssch">UE procedure for receiving PSSCH</h2>
+
+<h2 id="ue-procedure-for-determining-resource-block-pool-for-pssch-in-sidelink-transmission-mode-3-and-4">UE procedure for determining resource block pool for PSSCH in sidelink transmission mode 3 and 4</h2>
+
+<h1 id="pscch">PSCCH</h1>
+
+<h2 id="ue-procedure-for-transmitting-pscch">UE procedure for transmitting PSCCH</h2>
+
+<p>For sidelink transmission mode 3, the UE shall determine the subframes and resource blocks for transmitting SCI format 1 as follows:
++ SCI format 1 is transmitted in two PRBs per slot in each subframe where the corresponding PSSCH is transmitted
++ If UE receives DCI format 5A in subframe $n$ with CRC scrambled by SL-V-RNTI, one transmission of PSCCH is in the PSCCH resources $L<em>{Init}$ in the first subframe that is included in $(t</em>{0}^{SL},t<em>{1}^{SL},t</em>{2}^{SL},&hellip;))$ and that starts not earlier than $T<em>{DL}-\frac{N</em>{TA}}{2}\cdot T<em>s+(4+m)\cdot 10^{-3}$.
+  + If &ldquo;Time gap between initial transmission and retransmission&rdquo; in the configured sidelink grant is not equal to zero, another transmission of PSCCH is in the PSCCH resource $L</em>{ReTX}$ in the subframe $t<em>{q+SF</em>{gap}}^{SL}$, where $SF_{gap}$ is the value indicated by &ldquo;Time gap between initial transmission and retransmission&rdquo; filed in the configured sidelink grant, subframe $t<em>q^{SL}$ corresponds to the subframe $n+k</em>{init}$. $L<em>{ReTX}$ corresponds to the value $n</em>{subCH}^{start}$ determined by the RIV set to the value indicated by &ldquo;Frequency resource location of initial transmission and retransmission&rdquo; field in the configured sidelink grant.
++ If the UE receives DCI format 5A in subframe $n$ with the CRS scrambled by SL-SPS-V-RNTI, and if the received DCI activates an SL SPS configuration, one transmission of PSCCH is in the resource $L<em>{Init}$ is in the first subframe that is included in $(t</em>{0}^{SL},t<em>{1}^{SL},t</em>{2}^{SL},&hellip;))$ and that starts not earlier than $T<em>{DL}-\frac{N</em>{TA}}{2}XT_s+(4+m)\cdot10^{-3}$.</p>
+
+<table>
+<thead>
+<tr>
+<th>SL index field in DCI format 5A</th>
+<th>Indicated value m</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>&lsquo;00&rsquo;</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>&lsquo;01&rsquo;</td>
+<td>1</td>
+</tr>
+
+<tr>
+<td>&lsquo;10&rsquo;</td>
+<td>2</td>
+</tr>
+
+<tr>
+<td>&lsquo;11&rsquo;</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>If &ldquo;Time gap between initial transmission and retransmission&rdquo; in the configured sidelink grant is not equal to zero, another transmission of PSCCH is in the PSCCH resource $L<em>{ReTX}$ in the subframe $t</em>{q+SF<em>{gap}}^{SL}$, where $SF</em>{gap}$ is the value indicated by &ldquo;Time gap between initial transmission and retransmission&rdquo; filed in the configured sidelink grant, subframe $t<em>q^{SL}$ corresponds to the subframe $n+k</em>{init}$. $L<em>{ReTX}$ corresponds to the value $n</em>{subCH}^{start}$ determined by the RIV set to the value indicated by &ldquo;Frequency resource location of initial transmission and retransmission&rdquo; field in the configured sidelink grant.</li>
+<li>For other contents of SCI format 1
+
+<ul>
+<li>Set Modulation and coding scheme as indicated by high layers</li>
+<li>&ldquo;Priority&rdquo; field is set according to the highest priority among those prioity(s) indicated by higher layers corresponding to the transport block</li>
+<li>&ldquo;Resource reservation&rdquo; sets to zero</li>
+<li>&ldquo;Time gap between initial transmission and retransmission&rdquo;,&ldquo;Frequency resource location of initial transmission and retransmission&rdquo;,&ldquo;Retransmission index&rdquo; are set according to the resources determined for PSSCH.</li>
+</ul></li>
+<li>UE shall randomly select the cyclic shift $n_{cs,\lambda}$ among {0,3,6,9} in each PSCCH transmission</li>
+</ul>
+
+<p>For sidelink transmission mode 4,
+- The UE shall determine the subframes and resource blocks for transmitting SCI format 1 as follows:
+  - SCI format 1 is transmitted in two physical resource blocks per slot in each subframe where the corresponding PSSCH is transmitted.
+  - If the configured sidelink grant from higher layer indicates the PSCCH resource in subframe $t_n^{SL}$, one transmission of PSCCH is in the indicated PSCCH resource m in subframe $t<em>n^{SL}$
+    - If &ldquo;Time gap between initial transmission and retransmission&rdquo; in the configured sidelink grant is not equal to zero, another transmission of PSCCH is in the PSCCH resource $L</em>{ReTX}$in subframe $t<em>{n+SF</em>{gap}^{SL}}$ where $SF<em>{gap}$ is the value indicated by &ldquo;Time gap between initial transmission and retransmission&rdquo; field in the configured sidelink grant,$L</em>{ReTX}$ corresponds to the value $n_{start}^{subCH}$  determined by the RIV set to the value indicated by &ldquo;Frequency resource location of the initial transmission and retransmission&rdquo; field in the configured sidelink grant.
++ For other contents of SCI format 1
+  + Set Modulation and coding scheme as indicated by high layers
+  + &ldquo;Priority&rdquo; field is set according to the highest priority among those prioity(s) indicated by higher layers corresponding to the transport block
+  +  &ldquo;Resource reservation&rdquo; field shoud be set according to the followed Table based on indicated value $X$, where $X$ is equal to the Resource reservation interval provided by higher layer divided by 100</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Resource reservation field in SCI format 1</td>
+<td>Indicated value X</td>
+<td>Condition</td>
+</tr>
+
+<tr>
+<td>&lsquo;0001&rsquo;, &lsquo;0010&rsquo;, …, &lsquo;1010&rsquo;</td>
+<td>Decimal equivalent of the field</td>
+<td>The higher layer decides to keep the resource for the transmission of the next transport block and the value X meets</td>
+</tr>
+
+<tr>
+<td>&lsquo;1011&rsquo;</td>
+<td>0.5</td>
+<td>The higher layer decides to keep the resource for the transmission of the next transport block and the value X is 0.5.</td>
+</tr>
+
+<tr>
+<td>&lsquo;1100&rsquo;</td>
+<td>0.2</td>
+<td>The higher layer decides to keep the resource for the transmission of the next transport block and the value X is 0.2.</td>
+</tr>
+
+<tr>
+<td>&lsquo;0000&rsquo;</td>
+<td>0</td>
+<td>The higher layer decides not to keep the resource for the transmission of the next transport block.</td>
+</tr>
+
+<tr>
+<td>&lsquo;1101&rsquo;, &lsquo;1110&rsquo;, &lsquo;1111&rsquo;</td>
+<td>Reserved</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p>&ldquo;Time gap between initial transmission and retransmission&rdquo;,&ldquo;Frequency resource location of initial transmission and retransmission&rdquo;,&ldquo;Retransmission index&rdquo; are set according to the resources determined for PSSCH.</p>
+
+<h2 id="ue-procedure-for-receiving-pscch">UE procedure for receiving PSCCH</h2>
+
+<h2 id="ue-procedure-for-determining-resource-block-pool-for-pscch-in-sidelink-transmission-mode-3-and-4">UE procedure for determining resource block pool for PSCCH in sidelink transmission mode 3 and 4</h2></li>
+</ul>
+
+<p>PSCCH resource $m$ is the set of two contiguous resource blocks with the physical resource block number $n<em>{PRB}=n</em>{subCHRBstart}+m*n<em>{subCHsize}+j for j=0 and 1$,where $n</em>{subCHRBstart}$ and $n_{subCHsize}$ are given by high layer parameters <em>startRBSubchannel</em> and <em>sizeSubchannel</em>,respectively.</p>
+
+<p>If PSCCH resource pool is configured, PSCCH resource $m$ is the set of two contiguous resource blocks with the physical resource block number $n<em>{PRB}=n</em>{PSCCHstart}+2*m+j for j=0 and 1$,where $n_{PSCCHstart}$ is configured by high layer parameters <em>startRBPSCCHPool</em> .</p>
+</p>
+
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">
+            
+                
+                
+                    
+                        <a href="/tags/#lte" class="badge badge-secondary"><span>lte</span></a>
+                    
+                        <a href="/tags/#v2x" class="badge badge-secondary"><span>v2x</span></a>
+                    
+                
+            
+        </small>
+    </div>
+</div>
+</div>
+
+        </main><footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 col-md">
+                <h5>Zhennian&#39;s Studio</h5>
+                &copy; 2019 Zhennian Sun                
+            </div>
+            <div class="col-3 col-md">
+                <h5>&nbsp;</h5>
+                &nbsp;
+            </div>
+            <div class="col-3 col-md">
+                <h5>&nbsp;</h5>
+                &nbsp;
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<script src="/js/vendor.min.3e5871eaa50b3aed8dc727d7e11c94314c0672556c7b4f2bd0dbf8dd0c00051f.js"></script> 
+
+</body>
+</html>
